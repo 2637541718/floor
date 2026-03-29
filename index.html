@@ -1,0 +1,2248 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>中科诺拉地板、中汉诺拉地板、中研诺拉地板 - 高性能橡胶地板解决方案</title>
+  <meta name="description" content="橡胶地板行业领导者。专业高性能橡胶地板研发与品牌运营，提供中科诺拉、中研诺拉、中汉诺拉三大橡胶地板品牌系列，满足不同场景地面材料需求。">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" crossorigin="anonymous">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#1E3A8A',
+            secondary: '#22C55E',
+            accent: '#F97316',
+            dark: '#1F2937',
+            light: '#F9FAFB'
+          },
+          fontFamily: {
+            sans: ['-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Noto Sans', 'Helvetica', 'Arial', 'sans-serif', 'Apple Color Emoji', 'Segoe UI Emoji']
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    /* 内联所有关键样式，确保在本地文件系统中正常显示 */
+    :root {
+      --primary-color: #1E3A8A; /* 深蓝色主色调 */
+      --secondary-color: #22C55E; /* 绿色辅助色 */
+      --accent-color: #F97316; /* 橙色强调色 */
+      --dark-color: #1F2937;
+      --light-color: #F9FAFB;
+    }
+    
+    html {
+      scroll-behavior: smooth;
+    }
+    
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji';
+      line-height: 1.5;
+      font-weight: 400;
+      color: #1F2937;
+      background-color: #F9FAFB;
+    }
+    
+    /* 确保Tailwind类名在本地环境中也能生效 */
+    .bg-primary { background-color: var(--primary-color) !important; }
+    .bg-secondary { background-color: var(--secondary-color) !important; }
+    .bg-accent { background-color: var(--accent-color) !important; }
+    .text-primary { color: var(--primary-color) !important; }
+    .text-secondary { color: var(--secondary-color) !important; }
+    .text-accent { color: var(--accent-color) !important; }
+    .border-primary { border-color: var(--primary-color) !important; }
+    
+    /* 导航栏滚动效果 */
+    .nav-scrolled {
+      background-color: white !important;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06) !important;
+    }
+    
+    /* 动画效果 */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    
+    .animate-fade-in {
+      animation: fadeIn 0.8s ease forwards;
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    
+    /* 轮播图指示器动画 */
+    @keyframes bounce {
+      0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+      40% { transform: translateY(-10px); }
+      60% { transform: translateY(-5px); }
+    }
+    
+    /* 确保所有Tailwind的基础样式都能应用 */
+    .flex { display: flex; }
+    .items-center { align-items: center; }
+    .justify-center { justify-content: center; }
+    .text-white { color: white !important; }
+    .text-gray-600 { color: #4B5563 !important; }
+    .font-bold { font-weight: 700 !important; }
+    .mb-4 { margin-bottom: 1rem !important; }
+    .mb-6 { margin-bottom: 1.5rem !important; }
+    .rounded-lg { border-radius: 0.5rem !important; }
+    .rounded-xl { border-radius: 0.75rem !important; }
+    .shadow-md { box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06) !important; }
+    .shadow-lg { box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05) !important; }
+    .p-4 { padding: 1rem !important; }
+    .p-6 { padding: 1.5rem !important; }
+    .py-3 { padding-top: 0.75rem !important; padding-bottom: 0.75rem !important; }
+    .px-6 { padding-left: 1.5rem !important; padding-right: 1.5rem !important; }
+    .px-8 { padding-left: 2rem !important; padding-right: 2rem !important; }
+    .w-full { width: 100% !important; }
+    .h-full { height: 100% !important; }
+    .object-cover { object-fit: cover !important; }
+    
+    /* 页面过渡样式 */
+    .page {
+      display: none;
+    }
+    
+    .page.active {
+      display: block;
+    }
+    
+    /* 平滑过渡动画 */
+    .fade-enter {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    
+    .fade-enter-active {
+      opacity: 1;
+      transform: translateY(0);
+      transition: opacity 300ms, transform 300ms;
+    }
+    
+    .fade-exit {
+      opacity: 1;
+    }
+    
+    .fade-exit-active {
+      opacity: 0;
+      transition: opacity 300ms;
+    }
+  </style>
+  <style type="text/tailwindcss">
+    @layer utilities {
+      .content-auto {
+        content-visibility: auto;
+      }
+    }
+  </style>
+  <!-- 基础样式已经在上面的style块中定义 -->
+    
+  <!-- 这些样式已经在上面的style块中定义 -->
+    
+  <!-- 这些样式已经在上面的style块中定义 -->
+  </style>
+</head>
+<body class="min-h-screen bg-gray-50">
+  <!-- 导航栏 -->
+  <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 bg-primary/90 py-5">
+    <div class="container mx-auto px-4">
+      <div class="flex justify-between items-center">
+        <!-- Logo -->
+        <a href="#" class="flex items-center" data-page="home">
+          <div class="w-10 h-10 bg-primary rounded-lg flex items-center justify-center mr-3">
+            <span class="text-white font-bold text-xl">N</span>
+          </div>
+          <span id="logo-text" class="text-xl font-bold text-white">橡胶地板</span>
+        </a>
+
+        <!-- 桌面导航 -->
+        <div class="hidden md:flex items-center space-x-8">
+           <a href="#" class="font-medium transition-colors text-white hover:text-white/90 nav-link" data-page="home">首页</a>
+           <a href="#" class="font-medium transition-colors text-white hover:text-white/90 nav-link" data-page="brand">品牌简介</a>
+           <a href="#" class="font-medium transition-colors text-white hover:text-white/90 nav-link" data-page="product">产品简介</a>
+           <a href="#" class="font-medium transition-colors text-white hover:text-white/90 nav-link" data-page="market">细分市场</a>
+           <a href="#" class="font-medium transition-colors text-white hover:text-white/90 nav-link" data-page="sustainability">可持续发展</a>
+           <a href="#" class="font-medium transition-colors text-white hover:text-white/90 nav-link" data-page="contact">联系我们</a>
+          <a href="#" class="bg-accent hover:bg-accent/90 text-white font-semibold py-2 px-5 rounded-lg transition-all transform hover:scale-105 shadow-md" data-page="contact">
+            咨询
+          </a>
+        </div>
+
+        <!-- 移动端菜单按钮 -->
+        <button id="mobile-menu-button" class="md:hidden focus:outline-none">
+           <i id="menu-icon" class="text-2xl text-white fa-solid fa-chevron-down"></i>
+        </button>
+      </div>
+
+      <!-- 移动端导航 -->
+      <div id="mobile-menu" class="md:hidden hidden bg-white shadow-lg rounded-b-xl mt-3 overflow-hidden">
+        <div class="flex flex-col p-4">
+          <a href="#" class="py-3 px-4 rounded-lg font-medium transition-colors text-gray-700 hover:bg-gray-50 mobile-link" data-page="home">首页</a>
+          <a href="#" class="py-3 px-4 rounded-lg font-medium transition-colors text-gray-700 hover:bg-gray-50 mobile-link" data-page="brand">品牌简介</a>
+          <a href="#" class="py-3 px-4 rounded-lg font-medium transition-colors text-gray-700 hover:bg-gray-50 mobile-link" data-page="product">产品简介</a>
+          <a href="#" class="py-3 px-4 rounded-lg font-medium transition-colors text-gray-700 hover:bg-gray-50 mobile-link" data-page="market">细分市场</a>
+          <a href="#" class="py-3 px-4 rounded-lg font-medium transition-colors text-gray-700 hover:bg-gray-50 mobile-link" data-page="sustainability">可持续发展</a>
+          <a href="#" class="py-3 px-4 rounded-lg font-medium transition-colors text-gray-700 hover:bg-gray-50 mobile-link" data-page="contact">联系我们</a>
+          <a href="#" class="mt-3 bg-accent hover:bg-accent/90 text-white font-semibold py-3 px-6 rounded-lg text-center transition-colors mobile-link" data-page="contact">
+            咨询
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- 主要内容区域 -->
+  <main class="pt-20">
+    <!-- 首页 -->
+    <div id="home" class="page active">
+       <!-- Hero Section - 自动切换轮播图 -->
+      <section class="relative h-[90vh] flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-r from-primary-color/90 to-primary-color/70 z-10"></div>
+        
+        <!-- 轮播图容器 -->
+        <div class="absolute inset-0 w-full h-full">
+          <img 
+            id="banner-1"
+            src="https://space.coze.cn/api/coze_space/gen_image?image_size=landscape_16_9&prompt=Modern%20office%20space%20with%20high-quality%20rubber%20flooring&sign=d9069e17cd0b1d98994844691e0bf66c" 
+            alt="高性能橡胶地板" 
+            class="absolute inset-0 w-full h-full object-cover opacity-100 transition-opacity duration-1000"
+          />
+          <img 
+            id="banner-2"
+            src="https://space.coze.cn/api/coze_space/gen_image?image_size=landscape_16_9&prompt=Commercial%20space%20with%20premium%20rubber%20flooring&sign=41d501f026647c00557e8c425f140175" 
+            alt="商业空间优质橡胶地板" 
+            class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-1000"
+          />
+          <img 
+            id="banner-3"
+            src="https://space.coze.cn/api/coze_space/gen_image?image_size=landscape_16_9&prompt=Sustainable%20flooring%20solutions%20for%20modern%20buildings&sign=fd85fa06848ab1dd5e2e03272d60a4a1" 
+            alt="现代建筑可持续地板解决方案" 
+            class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-1000"
+          />
+        </div>
+        
+        <div class="container mx-auto px-4 z-20 text-center">
+          <div id="banner-content">
+       <h3 id="banner-title" class="text-[clamp(2rem,6vw,3.25rem)] font-bold text-white mb-6 leading-tight animate-fade-in">
+ 科技、创新、文化<br />
+ <span class="text-accent">打造每一寸恰到好处的地面</span>
+</h3>
+            <p id="banner-description" class="text-[clamp(1rem,2vw,1.25rem)] text-white/90 mb-10 max-w-3xl mx-auto animate-fade-in" style="animation-delay: 0.2s">
+              我们专注于高性能橡胶地板研发与品牌运营，以三大系列品牌满足不同场景对地面材料的差异化需求。
+            </p>
+          </div>
+          <div class="flex flex-col sm:flex-row justify-center gap-4 animate-fade-in" style="animation-delay: 0.4s">
+            <a href="#" class="bg-accent hover:bg-accent/90 text-white font-semibold py-3 px-8 rounded-lg transition-all transform hover:scale-105 shadow-lg" data-page="product">
+              探索产品系列
+            </a>
+            <a href="#" class="bg-white hover:bg-white/90 text-primary font-semibold py-3 px-8 rounded-lg transition-all transform hover:scale-105 shadow-lg" data-page="contact">
+              联系我们
+            </a>
+          </div>
+        </div>
+        
+        {/* 轮播指示器 */}
+        <div id="banner-indicators" class="absolute bottom-20 left-1/2 transform -translate-x-1/2 z-20 flex space-x-2">
+          <button
+            onclick="goToBanner(0)"
+            class="w-10 h-3 rounded-full bg-white transition-all duration-300"
+            aria-label="Go to slide 1"
+          ></button>
+          <button
+            onclick="goToBanner(1)"
+            class="w-3 h-3 rounded-full bg-white/50 transition-all duration-300"
+            aria-label="Go to slide 2"
+          ></button>
+          <button
+            onclick="goToBanner(2)"
+            class="w-3 h-3 rounded-full bg-white/50 transition-all duration-300"
+            aria-label="Go to slide 3"
+          ></button>
+        </div>
+        
+        {/* 向下滚动指示器 */}
+  <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 z-20 animate-bounce">
+          <a href="#intro" class="text-white/80 hover:text-white">
+            <i class="fa-solid fa-chevron-down text-2xl"></i>
+          </a>
+        </div>
+      </section>
+
+      <!-- Introduction Section -->
+      <section id="intro" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+          <div class="text-center mb-16 animate-fade-in">
+            <h2 class="text-[clamp(1.5rem,3vw,2.5rem)] font-bold text-primary mb-4">关于我们</h2>
+            <div class="w-20 h-1 bg-accent mx-auto mb-6"></div>
+            <p class="text-gray-600 max-w-3xl mx-auto">
+              我们是一家专注于高性能橡胶地板研发与品牌运营的企业。以"科技、创新、文化"为核心理念，
+              我们推出三大系列品牌——中科诺拉、中研诺拉、中汉诺拉，分别满足不同场景对地面材料的差异化需求。
+            </p>
+          </div>
+
+          <!-- Brands Section -->
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Zhongke Nola -->
+            <div class="bg-white rounded-xl shadow-md overflow-hidden h-full transition-all hover:shadow-xl">
+              <div class="h-48 overflow-hidden bg-gray-200">
+                <img 
+                  src="https://space.coze.cn/api/coze_space/gen_image?image_size=square&prompt=High-tech%20rubber%20flooring%20in%20commercial%20space&sign=1f5c6cd5ea7bdbbcfa5bec48960679be" 
+                  alt="中科诺拉" 
+                  class="w-full h-full object-cover transition-transform hover:scale-105"
+                />
+              </div>
+              <div class="p-6">
+                <h3 class="text-xl font-bold text-primary mb-3">中科诺拉</h3>
+                <p class="text-gray-600 mb-4">科技型，以科技为引领，追求卓越性能。</p>
+                <div class="flex justify-between items-center">
+                  <span class="text-sm text-gray-500">适用于通用商业、运动场所、潮湿环境</span>
+                  <a href="#" class="text-accent hover:text-accent/80 font-medium flex items-center" data-page="product">
+                    了解更多 <i class="fa-solid fa-arrow-right ml-2 text-sm"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Zhongyan Nola -->
+            <div class="bg-white rounded-xl shadow-md overflow-hidden h-full transition-all hover:shadow-xl">
+              <div class="h-48 overflow-hidden bg-gray-200">
+                <img 
+                  src="https://space.coze.cn/api/coze_space/gen_image?image_size=square&prompt=Modern%20laboratory%20with%20innovative%20flooring&sign=2dc9d9f94f94aaa8021a06e0a1f6fee0" 
+                  alt="中研诺拉" 
+                  class="w-full h-full object-cover transition-transform hover:scale-105"
+                />
+              </div>
+              <div class="p-6">
+                <h3 class="text-xl font-bold text-primary mb-3">中研诺拉</h3>
+                <p class="text-gray-600 mb-4">研发型，以研发为核心，驱动产品创新。</p>
+                <div class="flex justify-between items-center">
+                  <span class="text-sm text-gray-500">适用于科技园区，研发中心，创新实验室</span>
+                  <a href="#" class="text-accent hover:text-accent/80 font-medium flex items-center" data-page="product">
+                    了解更多 <i class="fa-solid fa-arrow-right ml-2 text-sm"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Zhonghan Nola -->
+            <div class="bg-white rounded-xl shadow-md overflow-hidden h-full transition-all hover:shadow-xl">
+              <div class="h-48 overflow-hidden bg-gray-200">
+                <img 
+                  src="https://space.coze.cn/api/coze_space/gen_image?image_size=square&prompt=Cultural%20venue%20with%20Chinese%20style%20flooring&sign=b2a5fbcb4887749722e12d04a17d836a" 
+                  alt="中汉诺拉" 
+                  class="w-full h-full object-cover transition-transform hover:scale-105"
+                />
+              </div>
+              <div class="p-6">
+                <h3 class="text-xl font-bold text-primary mb-3">中汉诺拉</h3>
+                <p class="text-gray-600 mb-4">文化型，以文化为灵魂，融合中式美学。</p>
+                <div class="flex justify-between items-center">
+                  <span class="text-sm text-gray-500">适用于文化场馆，博物馆，中式餐厅</span>
+                  <a href="#" class="text-accent hover:text-accent/80 font-medium flex items-center" data-page="product">
+                    了解更多 <i class="fa-solid fa-arrow-right ml-2 text-sm"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Features Section -->
+      <section class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+          <div class="text-center mb-16 animate-fade-in">
+            <h2 class="text-[clamp(1.5rem,3vw,2.5rem)] font-bold text-primary mb-4">为什么选择我们</h2>
+            <div class="w-20 h-1 bg-accent mx-auto mb-6"></div>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <!-- Feature 1 -->
+            <div class="text-center">
+              <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                <i class="fa-solid fa-cogs text-2xl text-primary"></i>
+              </div>
+              <h3 class="text-xl font-bold text-primary mb-3">卓越性能</h3>
+              <p class="text-gray-600">多种厚度与表面纹路选择，满足不同场景对地面功能与美学的需求，性能稳定可靠。</p>
+            </div>
+
+            <!-- Feature 2 -->
+            <div class="text-center">
+              <div class="w-16 h-16 bg-secondary/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                <i class="fa-solid fa-leaf text-2xl text-secondary"></i>
+              </div>
+              <h3 class="text-xl font-bold text-primary mb-3">环保材料</h3>
+              <p class="text-gray-600">严格符合国家环保标准，生产过程中严格控制有害物质排放，确保使用安全。</p>
+            </div>
+
+            <!-- Feature 3 -->
+            <div class="text-center">
+              <div class="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                <i class="fa-solid fa-lightbulb text-2xl text-accent"></i>
+              </div>
+              <h3 class="text-xl font-bold text-primary mb-3">持续创新</h3>
+              <p class="text-gray-600">致力于新材料、新工艺、新技术的研发应用，推动产品向更环保、更耐用的方向演进。</p>
+            </div>
+
+            <!-- Feature 4 -->
+            <div class="text-center">
+              <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                <i class="fa-solid fa-handshake text-2xl text-primary"></i>
+              </div>
+              <h3 class="text-xl font-bold text-primary mb-3">专业服务</h3>
+              <p class="text-gray-600">从厚度选择到表面设计，我们致力于为客户提供更专业、更精准的地面解决方案。</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Application Scenarios -->
+      <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+          <div class="text-center mb-16 animate-fade-in">
+            <h2 class="text-[clamp(1.5rem,3vw,2.5rem)] font-bold text-primary mb-4">适用场景</h2>
+            <div class="w-20 h-1 bg-accent mx-auto mb-6"></div>
+            <p class="text-gray-600 max-w-3xl mx-auto">
+              我们的橡胶地板产品广泛应用于各种场所，从商业空间到文化场馆，从运动场所到研发中心，为不同环境提供专业的地面解决方案。
+            </p>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div class="relative rounded-xl overflow-hidden h-64 group">
+              <img 
+                src="https://space.coze.cn/api/coze_space/gen_image?image_size=landscape_4_3&prompt=Commercial%20space%20with%20rubber%20flooring&sign=e8fce3d1308861f20ec5f4b08ff293c8" 
+                alt="商业空间" 
+                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-6">
+                <h3 class="text-xl font-bold text-white">商业空间</h3>
+              </div>
+            </div>
+            
+            <div class="relative rounded-xl overflow-hidden h-64 group">
+              <img 
+                src="https://space.coze.cn/api/coze_space/gen_image?image_size=landscape_4_3&prompt=Gym%20with%20rubber%20flooring&sign=8934691ef61be7f2afb35ddfd0374dd6" 
+                alt="运动场所" 
+                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-6">
+                <h3 class="text-xl font-bold text-white">运动场所</h3>
+              </div>
+            </div>
+            
+            <div class="relative rounded-xl overflow-hidden h-64 group">
+              <img 
+                src="https://space.coze.cn/api/coze_space/gen_image?image_size=landscape_4_3&prompt=Laboratory%20with%20special%20flooring&sign=f93ca11e11e8171e456e7bf3e758278c" 
+                alt="特殊场所" 
+                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-6">
+                <h3 class="text-xl font-bold text-white">特殊场所</h3>
+              </div>
+            </div>
+            
+            <div class="relative rounded-xl overflow-hidden h-64 group">
+              <img 
+                src="https://space.coze.cn/api/coze_space/gen_image?image_size=landscape_4_3&prompt=Cultural%20museum%20interior&sign=8800eb7cc4ae24d2f955a0dde8fff955" 
+                alt="文化场馆" 
+                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-6">
+                <h3 class="text-xl font-bold text-white">文化场馆</h3>
+              </div>
+            </div>
+            
+            <div class="relative rounded-xl overflow-hidden h-64 group">
+              <img 
+                src="https://space.coze.cn/api/coze_space/gen_image?image_size=landscape_4_3&prompt=Tech%20park%20office&sign=64dd23267db8f45a5ed26b3aa70d0a8c" 
+                alt="科技园区" 
+                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-6">
+                <h3 class="text-xl font-bold text-white">科技园区</h3>
+              </div>
+            </div>
+            
+            <div class="relative rounded-xl overflow-hidden h-64 group">
+              <img 
+                src="https://space.coze.cn/api/coze_space/gen_image?image_size=landscape_4_3&prompt=Wet%20area%20with%20slip-resistant%20flooring&sign=dff3b5dc900ede45c144b5cbb2fc21d3" 
+                alt="潮湿环境" 
+                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-6">
+                <h3 class="text-xl font-bold text-white">潮湿环境</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Sustainability Section -->
+      <section class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+          <div class="flex flex-col lg:flex-row items-center gap-12">
+            <div class="lg:w-1/2">
+              <h2 class="text-[clamp(1.5rem,3vw,2.5rem)] font-bold text-primary mb-4">可持续发展</h2>
+              <div class="w-20 h-1 bg-accent mb-6"></div>
+              <p class="text-gray-600 mb-6">
+                我们认为，真正的可持续发展，体现在产品的全生命周期中。从耐用性、适用性到创新驱动和文化传承，我们致力于以可持续的方式打造持久的地面。
+              </p>
+              <ul class="space-y-4">
+                <li class="flex items-start">
+                  <i class="fa-solid fa-check-circle text-secondary mt-1 mr-3"></i>
+                  <span class="text-gray-600">更长寿命，更少更换，降低资源消耗</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fa-solid fa-check-circle text-secondary mt-1 mr-3"></i>
+                  <span class="text-gray-600">精准匹配需求，避免"过度配置"或"配置不足"</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fa-solid fa-check-circle text-secondary mt-1 mr-3"></i>
+                  <span class="text-gray-600">持续研发新材料、新工艺，推动产品向更环保方向演进</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fa-solid fa-check-circle text-secondary mt-1 mr-3"></i>
+                  <span class="text-gray-600">将传统文化元素融入现代设计，让文化可持续延续</span>
+                </li>
+              </ul>
+              <div class="mt-8">
+                <a href="#" class="inline-flex items-center text-accent hover:text-accent/80 font-semibold" data-page="sustainability">
+                  了解更多可持续发展理念 <i class="fa-solid fa-arrow-right ml-2"></i>
+                </a>
+              </div>
+            </div>
+            <div class="lg:w-1/2">
+              <img 
+                src="https://space.coze.cn/api/coze_space/gen_image?image_size=landscape_4_3&prompt=Sustainable%20flooring%20material%20production%20process&sign=b92bb1678324f773a3402a0da16a1774" 
+                alt="可持续发展" 
+                class="w-full h-auto rounded-xl shadow-lg"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Call to Action -->
+      <section class="py-16 bg-gradient-to-r from-primary to-primary/80 text-white">
+        <div class="container mx-auto px-4 text-center">
+          <h2 class="text-[clamp(1.5rem,3vw,2.5rem)] font-bold mb-6">
+            为您的空间选择专业的地面解决方案
+          </h2>
+          <p class="text-white/90 mb-10 max-w-2xl mx-auto">
+            无论您是项目合作、产品咨询，还是希望了解更多信息，我们都期待与您沟通，为您提供专业的地面解决方案。
+          </p>
+          <div>
+            <a href="#" class="inline-block bg-accent hover:bg-accent/90 text-white font-semibold py-3 px-8 rounded-lg transition-all transform hover:scale-105 shadow-lg" data-page="contact">
+              立即联系我们
+            </a>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- 品牌简介 -->
+    <div id="brand" class="page">
+      <!-- Hero Section -->
+      <section class="relative h-[50vh] flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-r from-primary-color/90 to-primary-color/70 z-10"></div>
+        <img 
+          src="https://space.coze.cn/api/coze_space/gen_image?image_size=landscape_16_9&prompt=Rubber%20flooring%20manufacturing%20process%20factory&sign=c5e521e013c5713d339afee6ee320e4d" 
+          alt="橡胶地板生产流程" 
+          class="absolute inset-0 w-full h-full object-cover"
+        />
+        <div class="container mx-auto px-4 z-20 text-center">
+          <h1 class="text-[clamp(2rem,5vw,3rem)] font-bold text-white mb-4 animate-fade-in">
+            品牌简介
+          </h1>
+          <p class="text-[clamp(1rem,2vw,1.25rem)] text-white/90 max-w-2xl mx-auto animate-fade-in" style="animation-delay: 0.2s">
+            科技、创新、文化 — 打造每一寸恰到好处的地面
+          </p>
+        </div>
+      </section>
+
+      <!-- About Us Section -->
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto animate-fade-in">
+            <h2 className="text-3xl font-bold text-primary mb-6">关于我们</h2>
+            <div className="prose prose-lg text-gray-600 max-w-none">
+              <p className="mb-4">
+                我们是一家专注于高性能橡胶地板研发与品牌运营的企业。以"科技、创新、文化"为核心理念，
+                我们推出三大系列品牌——中科诺拉、中研诺拉、中汉诺拉，分别满足不同场景对地面材料的差异化需求。
+              </p>
+              <p>
+                我们坚信，好的地面不仅是承载脚步的基石，更是空间品质的表达。从厚度选择到表面设计，
+                我们致力于为客户提供更专业、更精准的地面解决方案。
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Brand Story Section -->
+      <section className="py-20 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16 animate-fade-in">
+            <h2 className="text-3xl font-bold text-primary mb-4">品牌故事</h2>
+            <div className="w-20 h-1 bg-accent mx-auto mb-6"></div>
+          </div>
+
+          <div className="max-w-4xl mx-auto prose prose-lg text-gray-600 max-w-none animate-fade-in" style="animation-delay: 0.2s">
+            <p className="mb-6">
+              在建筑材料领域，地面承载着最频繁的使用、最直接的触感。我们深知，不同空间对地面的要求各不相同——
+              有的需要更强的耐磨性，有的需要更好的防滑性能，有的需要独特的视觉体验。
+            </p>
+            <p>
+              正是基于这样的洞察，我们打造了三大系列品牌，以满足不同场景的需求，让每一寸地面都能恰到好处地发挥其功能与美学价值。
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Three Brands Section -->
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16 animate-fade-in">
+            <h2 className="text-3xl font-bold text-primary mb-4">三大品牌</h2>
+            <div className="w-20 h-1 bg-accent mx-auto mb-6"></div>
+            <p className="text-gray-600 max-w-3xl mx-auto">
+              三大品牌，三种定位，共同服务于一个目标：让每一寸地面，都恰到好处。
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Zhongke Nola -->
+            <div className="bg-white rounded-xl shadow-lg overflow-hidden transition-all hover:shadow-xl">
+              <div className="h-48 overflow-hidden">
+                <img 
+                  src="https://space.coze.cn/api/coze_space/gen_image?image_size=square&prompt=High-tech%20rubber%20flooring%20product%20display&sign=6cde519c2cf96c6ba3e5045b7f0bc8b5" 
+                  alt="中科诺拉" 
+                  className="w-full h-full object-cover transition-transform hover:scale-105"
+                />
+              </div>
+              <div className="p-6">
+                <h3 className="text-xl font-bold text-primary mb-3">中科诺拉</h3>
+                <div className="w-16 h-1 bg-accent mb-4"></div>
+                <p className="text-gray-600 mb-4">科技型，以科技为引领，追求卓越性能。</p>
+                <div className="bg-gray-50 p-4 rounded-lg">
+                  <h4 className="font-semibold text-gray-800 mb-2">适用场景</h4>
+                  <ul className="text-gray-600 space-y-2">
+                    <li className="flex items-start">
+                      <i className="fa-solid fa-check text-secondary mt-1 mr-2"></i>
+                      <span>通用商业</span>
+                    </li>
+                    <li className="flex items-start">
+                      <i className="fa-solid fa-check text-secondary mt-1 mr-2"></i>
+                      <span>运动场所</span>
+                    </li>
+                    <li className="flex items-start">
+                      <i className="fa-solid fa-check text-secondary mt-1 mr-2"></i>
+                      <span>潮湿环境</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <!-- Zhongyan Nola -->
+            <div className="bg-white rounded-xl shadow-lg overflow-hidden transition-all hover:shadow-xl">
+              <div className="h-48 overflow-hidden">
+                <img 
+                  src="https://space.coze.cn/api/coze_space/gen_image?image_size=square&prompt=Research%20and%20development%20of%20new%20flooring%20materials&sign=44213a4447613530d335983ba8e154da" 
+                  alt="中研诺拉" 
+                  className="w-full h-full object-cover transition-transform hover:scale-105"
+                />
+              </div>
+              <div className="p-6">
+                <h3 className="text-xl font-bold text-primary mb-3">中研诺拉</h3>
+                <div className="w-16 h-1 bg-accent mb-4"></div>
+                <p className="text-gray-600 mb-4">研发型，以研发为核心，驱动产品创新。</p>
+                <div className="bg-gray-50 p-4 rounded-lg">
+                  <h4 className="font-semibold text-gray-800 mb-2">适用场景</h4>
+                  <ul className="text-gray-600 space-y-2">
+                    <li className="flex items-start">
+                      <i className="fa-solid fa-check text-secondary mt-1 mr-2"></i>
+                      <span>科技园区</span>
+                    </li>
+                    <li className="flex items-start">
+                      <i className="fa-solid fa-check text-secondary mt-1 mr-2"></i>
+                      <span>研发中心</span>
+                    </li>
+                    <li className="flex items-start">
+                      <i className="fa-solid fa-check text-secondary mt-1 mr-2"></i>
+                      <span>创新实验室</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <!-- Zhonghan Nola -->
+            <div className="bg-white rounded-xl shadow-lg overflow-hidden transition-all hover:shadow-xl">
+              <div className="h-48 overflow-hidden">
+                <img 
+                  src="https://space.coze.cn/api/coze_space/gen_image?image_size=square&prompt=Chinese%20style%20artistic%20flooring%20design&sign=039cffd71bcfb9e236a4d22a4016f7a0" 
+                  alt="中汉诺拉" 
+                  className="w-full h-full object-cover transition-transform hover:scale-105"
+                />
+              </div>
+              <div className="p-6">
+                <h3 className="text-xl font-bold text-primary mb-3">中汉诺拉</h3>
+                <div className="w-16 h-1 bg-accent mb-4"></div>
+                <p className="text-gray-600 mb-4">文化型，以文化为灵魂，融合中式美学。</p>
+                <div className="bg-gray-50 p-4 rounded-lg">
+                  <h4 className="font-semibold text-gray-800 mb-2">适用场景</h4>
+                  <ul className="text-gray-600 space-y-2">
+                    <li className="flex items-start">
+                      <i className="fa-solid fa-check text-secondary mt-1 mr-2"></i>
+                      <span>文化场馆</span>
+                    </li>
+                    <li className="flex items-start">
+                      <i className="fa-solid fa-check text-secondary mt-1 mr-2"></i>
+                      <span>博物馆</span>
+                    </li>
+                    <li className="flex items-start">
+                      <i className="fa-solid fa-check text-secondary mt-1 mr-2"></i>
+                      <span>中式餐厅</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Core Values Section -->
+      <section className="py-20 bg-primary text-white">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16 animate-fade-in">
+            <h2 className="text-3xl font-bold mb-4">核心理念</h2>
+            <div className="w-20 h-1 bg-accent mx-auto mb-6"></div>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+            <!-- Tech -->
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 text-center transition-all hover:bg-white/20">
+              <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-6">
+                <i className="fa-solid fa-microchip text-2xl"></i>
+              </div>
+              <h3 className="text-xl font-bold mb-4">科技</h3>
+              <p className="text-white/80">
+                以科技为引领，不断提升产品性能，为客户提供更专业、更精准的地面解决方案。
+              </p>
+            </div>
+
+            <!-- Innovation -->
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 text-center transition-all hover:bg-white/20">
+              <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-6">
+                <i className="fa-solid fa-lightbulb text-2xl"></i>
+              </div>
+              <h3 className="text-xl font-bold mb-4">创新</h3>
+              <p className="text-white/80">
+                持续研发新材料、新工艺、新技术，推动产品向更环保、更耐用、更美观的方向演进。
+              </p>
+            </div>
+
+            <!-- Culture -->
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 text-center transition-all hover:bg-white/20">
+              <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-6">
+                <i className="fa-solid fa-book text-2xl"></i>
+              </div>
+              <h3 className="text-xl font-bold mb-4">文化</h3>
+              <p className="text-white/80">
+                将传统文化元素融入现代设计，让文化以可持续的方式在空间中延续，创造独特的视觉体验。
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- 产品简介 -->
+    <div id="product" class="page">
+      <!-- Hero Section -->
+      <section class="relative h-[50vh] flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-r from-primary-color/90 to-primary-color/70 z-10"></div>
+        <img 
+          src="https://space.coze.cn/api/coze_space/gen_image?image_size=landscape_16_9&prompt=Various%20types%20of%20rubber%20flooring%20products%20display&sign=4a28b5bf9ed665881832b3f7668d7b8d" 
+          alt="橡胶地板产品展示" 
+          class="absolute inset-0 w-full h-full object-cover"
+        />
+        <div className="container mx-auto px-4 z-20 text-center">
+          <h1 className="text-[clamp(2rem,5vw,3rem)] font-bold text-white mb-4 animate-fade-in">
+            产品简介
+          </h1>
+          <p className="text-[clamp(1rem,2vw,1.25rem)] text-white/90 max-w-2xl mx-auto animate-fade-in" style="animation-delay: 0.2s">
+            为不同场景提供专业的地面解决方案
+          </p>
+        </div>
+      </section>
+
+      <!-- Product Overview -->
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto text-center mb-16 animate-fade-in">
+            <h2 className="text-3xl font-bold text-primary mb-6">产品线总览</h2>
+            <p className="text-gray-600">
+              我们提供三大系列橡胶地板产品，分别满足不同场景对地面材料的差异化需求，从厚度选择到表面设计，
+              为客户提供更专业、更精准的地面解决方案。
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Zhongke Nola Products -->
+      <section className="py-20 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center animate-fade-in">
+            <div>
+              <h3 className="text-2xl font-bold text-primary mb-4">2.1 中科诺拉 | 高性能橡胶地板系列</h3>
+              <div className="w-16 h-1 bg-accent mb-6"></div>
+              <p className="text-gray-600 mb-6">
+                中科诺拉系列以科技为引领，追求卓越性能。我们提供多种厚度与表面纹路选择，满足不同场景对地面功能与美学的需求，性能稳定可靠。
+              </p>
+              
+              <div className="space-y-4 mb-8">
+                <div className="flex items-start">
+                  <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center mt-1 mr-4 flex-shrink-0">
+                    <i className="fa-solid fa-check text-primary text-sm"></i>
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-gray-800">多种厚度选择</h4>
+                    <p className="text-gray-600">提供从4.5mm到10mm的多种厚度选择，满足不同使用强度需求。</p>
+                  </div>
+                </div>
+                
+                <div className="flex items-start">
+                  <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center mt-1 mr-4 flex-shrink-0">
+                    <i className="fa-solid fa-check text-primary text-sm"></i>
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-gray-800">丰富的表面纹路</h4>
+                    <p className="text-gray-600">平滑、石板、锤击、凸起等多种表面纹路，满足不同美学需求。</p>
+                  </div>
+                </div>
+                
+                <div className="flex items-start">
+                  <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center mt-1 mr-4 flex-shrink-0">
+                    <i className="fa-solid fa-check text-primary text-sm"></i>
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-gray-800">稳定可靠的性能</h4>
+                    <p className="text-gray-600">耐磨、防滑、抗冲击、易清洁等特性，适合高流量场所使用。</p>
+                  </div>
+                </div>
+              </div>
+              
+              <div className="bg-primary/5 border border-primary/20 rounded-lg p-6">
+                <h4 className="font-semibold text-primary mb-2">适用场景</h4>
+                <div className="flex flex-wrap gap-2">
+                  <span className="bg-white px-3 py-1 rounded-full text-sm text-gray-700 shadow-sm">通用商业</span>
+                  <span className="bg-white px-3 py-1 rounded-full text-sm text-gray-700 shadow-sm">运动场所</span>
+                  <span className="bg-white px-3 py-1 rounded-full text-sm text-gray-700 shadow-sm">潮湿环境</span>
+                  <span className="bg-white px-3 py-1 rounded-full text-sm text-gray-700 shadow-sm">医院</span>
+                  <span className="bg-white px-3 py-1 rounded-full text-sm text-gray-700 shadow-sm">学校</span>
+                </div>
+              </div>
+            </div>
+            
+            <div className="grid grid-cols-2 gap-4">
+              <img 
+                src="https://space.coze.cn/api/coze_space/gen_image?image_size=square&prompt=Rubber%20flooring%20sample%20with%20smooth%20surface&sign=91038fed1dca8f536304b3cd67ddd3d4" 
+                alt="平滑表面橡胶地板" 
+                className="rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300"
+              />
+              <img 
+                src="https://space.coze.cn/api/coze_space/gen_image?image_size=square&prompt=Rubber%20flooring%20sample%20with%20stone%20texture&sign=96abc0c7e9eab22f0072eae7437bfc99" 
+                alt="石板纹理橡胶地板" 
+                className="rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 mt-8"
+              />
+              <img 
+                src="https://space.coze.cn/api/coze_space/gen_image?image_size=square&prompt=Rubber%20flooring%20sample%20with%20hammered%20texture&sign=5a1b21cc4e74fb2248848334e37aa69f" 
+                alt="锤击纹理橡胶地板" 
+                className="rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300"
+              />
+              <img 
+                src="https://space.coze.cn/api/coze_space/gen_image?image_size=square&prompt=Rubber%20flooring%20sample%20with%20raised%20texture&sign=e2199011654e8adcbe0e44f9b5cee30e" 
+                alt="凸起纹理橡胶地板" 
+                className="rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Zhongyan Nola Products -->
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center animate-fade-in">
+            <div className="order-2 lg:order-1">
+              <div className="grid grid-cols-2 gap-4">
+                <img 
+                  src="https://space.coze.cn/api/coze_space/gen_image?image_size=square&prompt=Laboratory%20testing%20of%20new%20flooring%20materials&sign=db3b20b2a01b376a942a87d55a6e34d5" 
+                  alt="新型地板材料实验室测试" 
+                  className="rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300"
+                />
+                <img 
+                  src="https://space.coze.cn/api/coze_space/gen_image?image_size=square&prompt=Prototype%20of%20innovative%20rubber%20flooring&sign=1fbe529ed48d521a640cfb0337cce6c2" 
+                  alt="创新橡胶地板原型" 
+                  className="rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300"
+                />
+                <img 
+                  src="https://space.coze.cn/api/coze_space/gen_image?image_size=square&prompt=3D%20design%20of%20modern%20flooring%20patterns&sign=14303692ca5028718f66e0ffe328bd71" 
+                  alt="现代地板图案3D设计" 
+                  className="rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300"
+                />
+                <img 
+                  src="https://space.coze.cn/api/coze_space/gen_image?image_size=square&prompt=Tech%20park%20interior%20with%20innovative%20flooring&sign=a1a5de7f9030b8816fd18f3bc4e9ce40" 
+                  alt="科技园区内的创新地板" 
+                  className="rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 mt-8"
+                />
+              </div>
+            </div>
+            
+            <div className="order-1 lg:order-2">
+              <h3 className="text-2xl font-bold text-primary mb-4">2.2 中研诺拉 | 研发型创新地板</h3>
+              <div className="w-16 h-1 bg-accent mb-6"></div>
+              <p className="text-gray-600 mb-6">
+                中研诺拉定位为"研发型产品线"，致力于将新材料、新工艺、新技术融入地面解决方案。
+                我们相信，好的产品源于持续的研发与创新。
+              </p>
+              
+              <div className="bg-accent/5 border border-accent/20 rounded-lg p-6 mb-8">
+                <div className="flex items-center mb-4">
+                  <i className="fa-solid fa-flask text-accent text-xl mr-3"></i>
+                  <h4 className="font-semibold text-accent">研发中，接受定制咨询</h4>
+                </div>
+                <p className="text-gray-600">
+                  我们正在为追求创新的客户研发更具科技感的地板产品。如果您有特殊需求（如特定厚度、特殊性能、定制纹路），
+                  欢迎与我们联系，共同探索更多可能。
+                </p>
+              </div>
+              
+              <div className="bg-primary/5 border border-primary/20 rounded-lg p-6">
+                <h4 className="font-semibold text-primary mb-2">适用场景</h4>
+                <div className="flex flex-wrap gap-2">
+                  <span className="bg-white px-3 py-1 rounded-full text-sm text-gray-700 shadow-sm">科技园区</span>
+                  <span className="bg-white px-3 py-1 rounded-full text-sm text-gray-700 shadow-sm">研发中心</span>
+                  <span className="bg-white px-3 py-1 rounded-full text-sm text-gray-700 shadow-sm">创新实验室</span>
+                  <span className="bg-white px-3 py-1 rounded-full text-sm text-gray-700 shadow-sm">高端商业空间</span>
+                  <span className="bg-white px-3 py-1 rounded-full text-sm text-gray-700 shadow-sm">特殊功能场所</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Zhonghan Nola Products -->
+      <section className="py-20 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center animate-fade-in">
+            <div>
+              <h3 className="text-2xl font-bold text-primary mb-4">2.3 中汉诺拉 | 文化型艺术地板</h3>
+              <div className="w-16 h-1 bg-accent mb-6"></div>
+              <p className="text-gray-600 mb-6">
+                中汉诺拉系列将中国传统美学与现代地面材料相结合，以文化为灵魂，融合中式美学，为空间注入独特的文化内涵。
+              </p>
+              
+              <div className="bg-accent/5 border border-accent/20 rounded-lg p-6 mb-8">
+                <div className="flex items-center mb-4">
+                  <i className="fa-solid fa-paint-brush text-accent text-xl mr-3"></i>
+                  <h4 className="font-semibold text-accent">设计中，接受预定</h4>
+                </div>
+                <p className="text-gray-600">
+                  我们正在将中国传统美学与现代地面材料相结合。如果您有文化空间项目需求，欢迎提前预定，
+                  我们将为您提供专属设计方案。
+                </p>
+              </div>
+              
+              <div className="bg-primary/5 border border-primary/20 rounded-lg p-6">
+                <h4 className="font-semibold text-primary mb-2">适用场景</h4>
+                <div className="flex flex-wrap gap-2">
+                  <span className="bg-white px-3 py-1 rounded-full text-sm text-gray-700 shadow-sm">文化场馆</span>
+                  <span className="bg-white px-3 py-1 rounded-full text-sm text-gray-700 shadow-sm">博物馆</span>
+                  <span className="bg-white px-3 py-1 rounded-full text-sm text-gray-700 shadow-sm">中式餐厅</span>
+                  <span className="bg-white px-3 py-1 rounded-full text-sm text-gray-700 shadow-sm">茶空间</span>
+                  <span className="bg-white px-3 py-1 rounded-full text-sm text-gray-700 shadow-sm">艺术展厅</span>
+                  <span className="bg-white px-3 py-1 rounded-full text-sm text-gray-700 shadow-sm">酒店大堂</span>
+                </div>
+              </div>
+            </div>
+            
+            <div>
+              <div className="grid grid-cols-2 gap-4">
+                <img 
+                  src="https://space.coze.cn/api/coze_space/gen_image?image_size=square&prompt=Chinese%20traditional%20pattern%20on%20rubber%20flooring&sign=0be526e2c8d38c723559f4eb5810135f" 
+                  alt="中国传统图案橡胶地板" 
+                  className="rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300"
+                />
+                <img 
+                  src="https://space.coze.cn/api/coze_space/gen_image?image_size=square&prompt=Museum%20interior%20with%20cultural%20flooring&sign=f0173fbd70950f0acb4797b9e5bea4f4" 
+                  alt="博物馆内的文化地板" 
+                  className="rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 mt-8"
+                />
+                <img 
+                  src="https://space.coze.cn/api/coze_space/gen_image?image_size=square&prompt=Chinese%20restaurant%20with%20traditional%20style%20flooring&sign=5c104020f2696a89d84643cebacdaba2" 
+                  alt="中式餐厅传统风格地板" 
+                  className="rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300"
+                />
+                <img 
+                  src="https://space.coze.cn/api/coze_space/gen_image?image_size=square&prompt=Art%20gallery%20with%20creative%20flooring&sign=450a153fd5c8bdd801d2eafea995bdfb" 
+                  alt="艺术展厅创意地板" 
+                  className="rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Product Features -->
+      <section className="py-20 bg-primary text-white">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16 animate-fade-in">
+            <h2 className="text-3xl font-bold mb-4">产品特性</h2>
+            <div className="w-20 h-1 bg-accent mx-auto mb-6"></div>
+            <p className="text-white/80 max-w-2xl mx-auto">
+              我们的橡胶地板产品具有多种优秀特性，为不同场景提供专业的地面解决方案。
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
+            <!-- Feature 1 -->
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 transition-all hover:bg-white/20">
+              <div className="w-14 h-14 bg-white/20 rounded-full flex items-center justify-center mb-6">
+                <i className="fa-solid fa-shield-alt text-2xl"></i>
+              </div>
+              <h3 className="text-xl font-bold mb-4">耐磨性强</h3>
+              <p className="text-white/80">
+                采用高品质橡胶材料，具有出色的耐磨性能，适用于高流量场所，延长使用寿命。
+              </p>
+            </div>
+
+            <!-- Feature 2 -->
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 transition-all hover:bg-white/20">
+              <div className="w-14 h-14 bg-white/20 rounded-full flex items-center justify-center mb-6">
+                <i className="fa-solid fa-water text-2xl"></i>
+              </div>
+              <h3 className="text-xl font-bold mb-4">防滑防水</h3>
+              <p className="text-white/80">
+                特殊表面处理，提供良好的防滑性能，同时具有防水特性，适合潮湿环境使用。
+              </p>
+            </div>
+
+            <!-- Feature 3 -->
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 transition-all hover:bg-white/20">
+              <div className="w-14 h-14 bg-white/20 rounded-full flex items-center justify-center mb-6">
+                <i className="fa-solid fa-fire text-2xl"></i>
+              </div><h3 className="text-xl font-bold mb-4">防火阻燃</h3>
+              <p className="text-white/80">
+                符合国家防火标准，具有良好的阻燃性能，为空间安全提供保障。
+              </p>
+            </div>
+
+            <!-- Feature 4 -->
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 transition-all hover:bg-white/20">
+              <div className="w-14 h-14 bg-white/20 rounded-full flex items-center justify-center mb-6">
+                <i className="fa-solid fa-volume-up text-2xl"></i>
+              </div>
+              <h3 className="text-xl font-bold mb-4">隔音降噪</h3>
+              <p className="text-white/80">
+                橡胶材料具有良好的吸音性能，有效降低噪音，创造安静舒适的环境。
+              </p>
+            </div>
+
+            <!-- Feature 5 -->
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 transition-all hover:bg-white/20">
+              <div className="w-14 h-14 bg-white/20 rounded-full flex items-center justify-center mb-6">
+                <i className="fa-solid fa-heart text-2xl"></i>
+              </div>
+              <h3 className="text-xl font-bold mb-4">环保健康</h3>
+              <p className="text-white/80">
+                严格符合国家环保标准，无有害气体释放，保障使用环境的健康安全。
+              </p>
+            </div>
+
+            <!-- Feature 6 -->
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 transition-all hover:bg-white/20">
+              <div className="w-14 h-14 bg-white/20 rounded-full flex items-center justify-center mb-6">
+                <i className="fa-solid fa-paint-roller text-2xl"></i>
+              </div>
+              <h3 className="text-xl font-bold mb-4">易于清洁</h3>
+              <p className="text-white/80">
+                表面光滑，污渍不易附着，清洁维护简单方便，降低使用成本。
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Call to Action -->
+      <section className="py-16 bg-gray-100">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="text-2xl font-bold text-primary mb-6 animate-fade-in">
+            寻找适合您空间的地面解决方案？
+          </h2>
+          <p className="text-gray-600 mb-10 max-w-2xl mx-auto animate-fade-in" style="animation-delay: 0.2s">
+            联系我们的专业团队，我们将为您提供个性化的地面解决方案建议。
+          </p>
+          <div className="animate-fade-in" style="animation-delay: 0.4s">
+            <a href="#" class="inline-block bg-accent hover:bg-accent/90 text-white font-semibold py-3 px-8 rounded-lg transition-all transform hover:scale-105 shadow-lg" data-page="contact">
+              立即咨询
+            </a>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- 细分市场 -->
+    <div id="market" class="page">
+      {/* Hero Section */}
+      <section class="relative h-[50vh] flex items-center justify-center overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-primary-color/90 to-primary-color/70 z-10"></div>
+        <img 
+          src="https://space.coze.cn/api/coze_space/gen_image?image_size=landscape_16_9&prompt=Various%20spaces%20with%20different%20rubber%20flooring&sign=fd39d399be109fb19e0a06152887eb7d" 
+          alt="不同空间的橡胶地板应用" 
+          className="absolute inset-0 w-full h-full object-cover"
+        />
+        <div className="container mx-auto px-4 z-20 text-center">
+          <h1 className="text-[clamp(2rem,5vw,3rem)] font-bold text-white mb-4 animate-fade-in">
+            细分市场
+          </h1>
+          <p className="text-[clamp(1rem,2vw,1.25rem)] text-white/90 max-w-2xl mx-auto animate-fade-in" style="animation-delay: 0.2s">
+            精准定位，服务不同场景
+          </p>
+        </div>
+      </section>
+
+      {/* Introduction */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto text-center mb-16 animate-fade-in">
+            <h2 className="text-3xl font-bold text-primary mb-6">精准匹配不同需求</h2>
+            <p className="text-gray-600">
+              不同的空间，对地面的要求各不相同。我们通过三大品牌，精准匹配不同细分市场的需求，
+              为每个场景提供最适合的地面解决方案。
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Market Segmentation by Brand */}
+      <section className="py-16 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16 animate-fade-in">
+            <h2 className="text-3xl font-bold text-primary mb-4">按品牌划分</h2>
+            <div className="w-20 h-1 bg-accent mx-auto mb-6"></div>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            {/* Zhongke Nola Market */}
+            <div className="bg-white rounded-xl shadow-lg overflow-hidden transition-all hover:shadow-xl">
+              <div className="bg-primary p-6 text-white">
+                <h3 className="text-xl font-bold mb-2">中科诺拉</h3>
+                <p className="text-white/80">科技型，以科技为引领，追求卓越性能</p>
+              </div>
+              <div className="p-6">
+                <div className="mb-6">
+                  <h4 className="font-semibold text-gray-800 mb-3">适用场景</h4>
+                  <div className="space-y-2">
+                    <div className="flex items-center">
+                      <i className="fa-solid fa-check-circle text-secondary mr-3"></i><span className="text-gray-600">通用商业</span>
+                    </div>
+                    <div className="flex items-center">
+                      <i className="fa-solid fa-check-circle text-secondary mr-3"></i>
+                      <span className="text-gray-600">运动场所</span>
+                    </div>
+                    <div className="flex items-center">
+                      <i className="fa-solid fa-check-circle text-secondary mr-3"></i><span className="text-gray-600">潮湿环境</span>
+                    </div>
+                  </div>
+                </div>
+                
+                <div className="mb-6">
+                  <h4 className="font-semibold text-gray-800 mb-3">产品特点</h4>
+                  <div className="space-y-2">
+                    <div className="flex items-center">
+                      <i className="fa-solid fa-star text-accent mr-3"></i>
+                      <span className="text-gray-600">多种厚度纹路选择</span>
+                    </div>
+                    <div className="flex items-center">
+                      <i className="fa-solid fa-star text-accent mr-3"></i>
+                      <span className="text-gray-600">性能稳定</span>
+                    </div>
+                    <div className="flex items-center">
+                      <i className="fa-solid fa-star text-accent mr-3"></i>
+                      <span className="text-gray-600">4.5-10mm平滑/石板/锤击/凸起</span>
+                    </div>
+                  </div>
+                </div>
+                
+                <div className="bg-primary/5 p-4 rounded-lg">
+                  <h4 className="font-semibold text-primary mb-2">核心优势</h4>
+                  <p className="text-gray-600 text-sm">
+                    提供多种厚度和表面结构选择，满足不同使用强度需求，适用于大多数常规场所。
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Zhongyan Nola Market */}
+            <div className="bg-white rounded-xl shadow-lg overflow-hidden transition-all hover:shadow-xl">
+              <div className="bg-accent p-6 text-white">
+                <h3 className="text-xl font-bold mb-2">中研诺拉</h3>
+                <p className="text-white/80">研发型，以研发为核心，驱动产品创新</p>
+              </div>
+              <div className="p-6">
+                <div className="mb-6">
+                  <h4 className="font-semibold text-gray-800 mb-3">适用场景</h4>
+                  <div className="space-y-2">
+                    <div className="flex items-center">
+                      <i className="fa-solid fa-check-circle text-secondary mr-3"></i>
+                      <span className="text-gray-600">创新驱动型场所</span>
+                    </div>
+                    <div className="flex items-center">
+                      <i className="fa-solid fa-check-circle text-secondary mr-3"></i>
+                      <span className="text-gray-600">科技园区</span>
+                    </div>
+                    <div className="flex items-center">
+                      <i className="fa-solid fa-check-circle text-secondary mr-3"></i>
+                      <span className="text-gray-600">研发中心</span>
+                    </div>
+                  </div>
+                </div>
+                
+                <div className="mb-6">
+                  <h4 className="font-semibold text-gray-800 mb-3">产品特点</h4>
+                  <div className="space-y-2">
+                    <div className="flex items-center">
+                      <i className="fa-solid fa-star text-accent mr-3"></i>
+                      <span className="text-gray-600">可定制研发</span>
+                    </div>
+                    <div className="flex items-center">
+                      <i className="fa-solid fa-star text-accent mr-3"></i>
+                      <span className="text-gray-600">专利技术</span>
+                    </div>
+                    <div className="flex items-center">
+                      <i className="fa-solid fa-star text-accent mr-3"></i>
+                      <span className="text-gray-600">接受定制</span>
+                    </div>
+                  </div>
+                </div>
+                
+                <div className="bg-accent/5 p-4 rounded-lg">
+                  <h4 className="font-semibold text-accent mb-2">核心优势</h4>
+                  <p className="text-gray-600 text-sm">
+                    专注于新材料、新工艺的研发应用，为追求创新的客户提供更具科技感的地板产品。
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Zhonghan Nola Market */}
+            <div className="bg-white rounded-xl shadow-lg overflow-hidden transition-all hover:shadow-xl">
+              <div className="bg-secondary p-6 text-white">
+                <h3 className="text-xl font-bold mb-2">中汉诺拉</h3>
+                <p className="text-white/80">文化型，以文化为灵魂，融合中式美学</p>
+              </div>
+              <div className="p-6">
+                <div className="mb-6">
+                  <h4 className="font-semibold text-gray-800 mb-3">适用场景</h4>
+                  <div className="space-y-2">
+                    <div className="flex items-center">
+                      <i className="fa-solid fa-check-circle text-secondary mr-3"></i>
+                      <span className="text-gray-600">文化氛围型场所</span>
+                    </div>
+                    <div className="flex items-center">
+                      <i className="fa-solid fa-check-circle text-secondary mr-3"></i>
+                      <span className="text-gray-600">文化场馆</span>
+                    </div>
+                    <div className="flex items-center">
+                      <i className="fa-solid fa-check-circle text-secondary mr-3"></i>
+                      <span className="text-gray-600">中式餐厅</span>
+                    </div>
+                  </div>
+                </div>
+                
+                <div className="mb-6">
+                  <h4 className="font-semibold text-gray-800 mb-3">产品特点</h4>
+                  <div className="space-y-2">
+                    <div className="flex items-center">
+                      <i className="fa-solid fa-star text-accent mr-3"></i>
+                      <span className="text-gray-600">文化元素融合</span>
+                    </div>
+                    <div className="flex items-center">
+                      <i className="fa-solid fa-star text-accent mr-3"></i>
+                      <span className="text-gray-600">艺术设计</span>
+                    </div>
+                    <div className="flex items-center">
+                      <i className="fa-solid fa-star text-accent mr-3"></i>
+                      <span className="text-gray-600">接受预定</span>
+                    </div>
+                  </div>
+                </div>
+                
+                <div className="bg-secondary/5 p-4 rounded-lg">
+                  <h4 className="font-semibold text-secondary mb-2">核心优势</h4>
+                  <p className="text-gray-600 text-sm">
+                    将中国传统美学与现代地面材料相结合，为文化空间提供独特的视觉体验和文化内涵。
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Solution Comparison */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16 animate-fade-in">
+            <h2 className="text-3xl font-bold text-primary mb-4">解决方案对比</h2>
+            <div className="w-20 h-1 bg-accent mx-auto mb-6"></div>
+            <p className="text-gray-600 max-w-3xl mx-auto">
+              选择适合的地面解决方案，需要考虑空间类型、使用强度、美学需求等多方面因素。
+              以下是我们三大品牌的解决方案对比，帮助您做出更明智的选择。
+            </p>
+          </div>
+
+          <div className="overflow-x-auto max-w-5xl mx-auto animate-fade-in" style="animation-delay: 0.2s">
+            <table className="w-full border-collapse">
+              <thead>
+                <tr className="bg-gray-100">
+                  <th className="py-4 px-6 text-left text-gray-800 font-semibold border-b">对比项</th>
+                  <th className="py-4 px-6 text-left text-primary font-semibold border-b">中科诺拉</th>
+                  <th className="py-4 px-6 text-left text-accent font-semibold border-b">中研诺拉</th>
+                  <th className="py-4 px-6 text-left text-secondary font-semibold border-b">中汉诺拉</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr className="hover:bg-gray-50 transition-colors">
+                  <td className="py-4 px-6 border-b text-gray-800 font-medium">定位</td>
+                  <td className="py-4 px-6 border-b text-gray-600">科技型</td>
+                  <td className="py-4 px-6 border-b text-gray-600">研发型</td>
+                  <td className="py-4 px-6 border-b text-gray-600">文化型</td>
+                </tr>
+                <tr className="hover:bg-gray-50 transition-colors">
+                  <td className="py-4 px-6 border-b text-gray-800 font-medium">核心价值</td>
+                  <td className="py-4 px-6 border-b text-gray-600">卓越性能</td>
+                  <td className="py-4 px-6 border-b text-gray-600">创新驱动</td>
+                  <td className="py-4 px-6 border-b text-gray-600">文化融合</td>
+                </tr>
+                <tr className="hover:bg-gray-50 transition-colors">
+                  <td className="py-4 px-6 border-b text-gray-800 font-medium">主要厚度</td>
+                  <td className="py-4 px-6 border-b text-gray-600">4.5-10mm</td>
+                  <td className="py-4 px-6 border-b text-gray-600">定制化</td>
+                  <td className="py-4 px-6 border-b text-gray-600">5.0-8.0mm</td>
+                </tr>
+                <tr className="hover:bg-gray-50 transition-colors">
+                  <td className="py-4 px-6 border-b text-gray-800 font-medium">表面处理</td>
+                  <td className="py-4 px-6 border-b text-gray-600">平滑/石板/锤击/凸起</td>
+                  <td className="py-4 px-6 border-b text-gray-600">创新纹理</td>
+                  <td className="py-4 px-6 border-b text-gray-600">文化元素图案</td>
+                </tr>
+                <tr className="hover:bg-gray-50 transition-colors">
+                  <td className="py-4 px-6 border-b text-gray-800 font-medium">适用强度</td>
+                  <td className="py-4 px-6 border-b text-gray-600">中高强度</td>
+                  <td className="py-4 px-6 border-b text-gray-600">根据需求定制</td>
+                  <td className="py-4 px-6 border-b text-gray-600">中等强度</td>
+                </tr>
+                <tr className="hover:bg-gray-50 transition-colors">
+                  <td className="py-4 px-6 border-b text-gray-800 font-medium">供货周期</td>
+                  <td className="py-4 px-6 border-b text-gray-600">常规库存</td>
+                  <td className="py-4 px-6 border-b text-gray-600">定制周期</td>
+                  <td className="py-4 px-6 border-b text-gray-600">预订生产</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      {/* Case Studies Preview */}
+      <section className="py-20 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16 animate-fade-in">
+            <h2 className="text-3xl font-bold text-primary mb-4">应用案例</h2>
+            <div className="w-20 h-1 bg-accent mx-auto mb-6"></div>
+            <p className="text-gray-600 max-w-3xl mx-auto">
+              我们的橡胶地板产品已成功应用于众多项目，为不同类型的空间提供专业的地面解决方案。
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {/* Case 1 */}
+            <div className="bg-white rounded-xl shadow-md overflow-hidden transition-all hover:shadow-xl">
+              <div className="h-48 overflow-hidden">
+                <img 
+                  src="https://space.coze.cn/api/coze_space/gen_image?image_size=landscape_4_3&prompt=Commercial%20center%20with%20high-performance%20rubber%20flooring&sign=30b8ed62beb7f09216af6f00aab6a5a0" 
+                  alt="商业中心案例" 
+                  className="w-full h-full object-cover transition-transform hover:scale-105"
+                />
+              </div>
+              <div className="p-6">
+                <h3 className="text-xl font-bold text-primary mb-2">商业中心改造</h3>
+                <p className="text-gray-600 mb-4">
+                  某大型商业中心采用中科诺拉系列橡胶地板，为高流量区域提供了耐用、易清洁的地面解决方案。
+                </p>
+                <div className="flex justify-between items-center">
+                  <span className="text-sm text-gray-500">使用产品：中科诺拉</span>
+                  <span className="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm">查看详情</span>
+                </div>
+              </div>
+            </div>
+
+            {/* Case 2 */}
+            <div className="bg-white rounded-xl shadow-md overflow-hidden transition-all hover:shadow-xl">
+              <div className="h-48 overflow-hidden">
+                <img 
+                  src="https://space.coze.cn/api/coze_space/gen_image?image_size=landscape_4_3&prompt=Tech%20park%20with%20innovative%20flooring%20solution&sign=c65fa64bf3dc6aec33b27d8a07cf6955" 
+                  alt="科技园区案例" 
+                  className="w-full h-full object-cover transition-transform hover:scale-105"
+                />
+              </div>
+              <div className="p-6">
+                <h3 className="text-xl font-bold text-primary mb-2">科技园区创新空间</h3>
+                <p className="text-gray-600 mb-4">
+                  为某科技园区量身定制中研诺拉系列地板，融合创新设计与实用功能，打造独特办公环境。
+                </p>
+                <div className="flex justify-between items-center">
+                  <span className="text-sm text-gray-500">使用产品：中研诺拉</span>
+                  <span className="bg-accent/10 text-accent px-3 py-1 rounded-full text-sm">查看详情</span>
+                </div>
+              </div>
+            </div>
+
+            {/* Case 3 */}
+            <div className="bg-white rounded-xl shadow-md overflow-hidden transition-all hover:shadow-xl">
+              <div className="h-48 overflow-hidden">
+                <img 
+                  src="https://space.coze.cn/api/coze_space/gen_image?image_size=landscape_4_3&prompt=Cultural%20museum%20with%20Chinese%20style%20flooring&sign=bfecd5580364cfcbf6552762afcee185" 
+                  alt="文化博物馆案例" 
+                  className="w-full h-full object-cover transition-transform hover:scale-105"
+                />
+              </div>
+              <div className="p-6">
+                <h3 className="text-xl font-bold text-primary mb-2">文化博物馆展示区</h3>
+                <p className="text-gray-600 mb-4">
+                  某文化博物馆选用中汉诺拉系列地板，将传统文化元素融入现代空间，提升整体文化氛围。
+                </p>
+                <div className="flex justify-between items-center">
+                  <span className="text-sm text-gray-500">使用产品：中汉诺拉</span>
+                  <span className="bg-secondary/10 text-secondary px-3 py-1 rounded-full text-sm">查看详情</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Expert Consultation */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto bg-gray-50 rounded-2xl p-10 shadow-md animate-fade-in">
+            <div className="text-center mb-8">
+              <h2 className="text-3xl font-bold text-primary mb-4">需要专业建议？</h2>
+              <p className="text-gray-600">
+                我们的专业团队可以根据您的具体需求，为您提供个性化的地面解决方案建议。
+              </p>
+            </div>
+            
+            <div className="flex flex-col md:flex-row justify-center gap-4">
+              <a href="#" className="bg-primary hover:bg-primary/90 text-white font-semibold py-3 px-8 rounded-lg transition-all transform hover:scale-105 shadow-lg text-center" data-page="contact">
+                预约专家咨询
+              </a>
+              <a href="#" className="bg-white hover:bg-gray-100 text-primary font-semibold py-3 px-8 rounded-lg transition-all transform hover:scale-105 shadow-md border border-primary/20 text-center" data-page="product">
+                浏览产品详情
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    {/* 可持续发展 */}
+    <div id="sustainability" class="page">
+      {/* Hero Section */}
+      <section class="relative h-[50vh] flex items-center justify-center overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-primary-color/90 to-primary-color/70 z-10"></div>
+        <img 
+          src="https://space.coze.cn/api/coze_space/gen_image?image_size=landscape_16_9&prompt=Sustainable%20rubber%20flooring%20production%20process&sign=37cee4b2c091364b7229e6983e419275" 
+          alt="可持续橡胶地板生产流程" 
+          className="absolute inset-0 w-full h-full object-cover"
+        />
+        <div className="container mx-auto px-4 z-20 text-center">
+          <h1 className="text-[clamp(2rem,5vw,3rem)] font-bold text-white mb-4 animate-fade-in">
+            可持续发展
+          </h1>
+          <p className="text-[clamp(1rem,2vw,1.25rem)] text-white/90 max-w-2xl mx-auto animate-fade-in" style="animation-delay: 0.2s">
+            以可持续的方式，打造持久的地面
+          </p>
+        </div>
+      </section>
+
+      {/* Introduction */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto text-center mb-16 animate-fade-in">
+            <h2 className="text-3xl font-bold text-primary mb-6">我们的可持续发展理念</h2>
+            <p className="text-gray-600">
+              我们认为，真正的可持续发展，体现在产品的全生命周期中。从原材料选择到生产过程，
+              从产品使用到废弃处理，我们始终将可持续发展理念融入每一个环节。
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Sustainability Pillars */}
+      <section className="py-16 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 max-w-6xl mx-auto animate-fade-in">
+            <div>
+              <div className="mb-12">
+                <div className="w-16 h-16 bg-secondary/10 rounded-full flex items-center justify-center mb-6">
+                  <i className="fa-solid fa-clock text-2xl text-secondary"></i>
+                </div>
+                <h3 className="text-2xl font-bold text-primary mb-4">耐用性，更长寿命，更少更换</h3>
+                <p className="text-gray-600">
+                  中科诺拉提供从4.5mm到10mm的多种厚度和不同表面结构选择，满足不同使用强度需求。
+                  10mm超厚系列适用于高强度运动场所，4.5mm/5.0mm系列适用于日常商业环境。
+                  合理的选择，意味着更长的使用寿命和更低的资源消耗。
+                </p>
+              </div>
+              
+              <div className="mb-12">
+                <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6">
+                  <i className="fa-solid fa-puzzle-piece text-2xl text-primary"></i>
+                </div>
+                <h3 className="text-2xl font-bold text-primary mb-4">适用性，精准匹配，避免浪费</h3>
+                <p className="text-gray-600">
+                  不同的场景需要不同的地面解决方案。我们通过多种厚度和纹路选择，
+                  帮助客户精准匹配需求——避免"过度配置"造成的资源浪费，也避免"配置不足"导致的提前更换。
+                </p>
+              </div>
+              
+              <div>
+                <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mb-6">
+                  <i className="fa-solid fa-lightbulb text-2xl text-accent"></i>
+                </div>
+                <h3 className="text-2xl font-bold text-primary mb-4">创新驱动，持续研发，不断进步</h3>
+                <p className="text-gray-600">
+                  中研诺拉系列致力于新材料、新工艺的研发应用，推动产品向更环保、更耐用的方向演进。
+                  我们不断探索可持续材料的应用，减少对环境的影响。
+                </p>
+              </div>
+            </div>
+            
+            <div>
+              <div className="grid grid-cols-1 gap-8">
+                <div className="bg-white rounded-xl shadow-md overflow-hidden">
+                  <img 
+                    src="https://space.coze.cn/api/coze_space/gen_image?image_size=landscape_4_3&prompt=Long-lasting%20rubber%20flooring%20in%20high-traffic%20area&sign=26cedbf7d58facad381f98c71f16160d" 
+                    alt="高流量区域的耐用橡胶地板" 
+                    className="w-full h-56 object-cover"
+                  />
+                  <div className="p-6">
+                    <h4 className="text-lg font-semibold text-primary mb-2">延长产品使用寿命</h4>
+                    <p className="text-gray-600">
+                      我们的橡胶地板具有出色的耐磨性能，在高流量区域也能保持长期稳定的使用效果，
+                      减少更换频率，降低资源消耗。
+                    </p>
+                  </div>
+                </div>
+                
+                <div className="bg-white rounded-xl shadow-md overflow-hidden">
+                  <img 
+                    src="https://space.coze.cn/api/coze_space/gen_image?image_size=landscape_4_3&prompt=Eco-friendly%20flooring%20material%20recycling%20process&sign=d668e2f7b18c7440aee4a2fa3536c230" 
+                    alt="环保地板材料回收流程" 
+                    className="w-full h-56 object-cover"
+                  />
+                  <div className="p-6">
+                    <h4 className="text-lg font-semibold text-primary mb-2">材料可回收利用</h4>
+                    <p className="text-gray-600">
+                      我们的橡胶地板产品采用可回收材料制造，在产品生命周期结束后，
+                      可以进行回收再利用，减少对环境的影响。
+                    </p>
+                  </div>
+                </div>
+                
+                <div className="bg-white rounded-xl shadow-md overflow-hidden">
+                  <img 
+                    src="https://space.coze.cn/api/coze_space/gen_image?image_size=landscape_4_3&prompt=Energy-efficient%20rubber%20flooring%20manufacturing&sign=e36db57482b0cf3c96a95bfe45c6f780" 
+                    alt="节能橡胶地板制造" 
+                    className="w-full h-56 object-cover"
+                  />
+                  <div className="p-6">
+                    <h4 className="text-lg font-semibold text-primary mb-2">节能生产工艺</h4>
+                    <p className="text-gray-600">
+                      我们采用先进的节能生产工艺，降低生产过程中的能源消耗和碳排放，
+                      为环境保护贡献力量。
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Cultural Sustainability */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center max-w-6xl mx-auto animate-fade-in">
+            <div>
+              <img 
+                src="https://space.coze.cn/api/coze_space/gen_image?image_size=landscape_4_3&prompt=Chinese%20traditional%20culture%20elements%20on%20modern%20flooring&sign=cefc043182659cebed906a0d7a1029fe" 
+                alt="现代地板上的中国传统文化元素" 
+                className="w-full h-auto rounded-xl shadow-lg"
+              />
+            </div>
+            
+            <div>
+              <h3 className="text-2xl font-bold text-primary mb-6">文化传承，让文化可持续</h3>
+              <p className="text-gray-600 mb-6">
+                中汉诺拉系列将传统文化元素融入现代设计，让文化以可持续的方式在空间中延续。
+                我们相信，文化的可持续发展同样重要，通过将传统美学与现代材料相结合，
+                我们为空间注入独特的文化内涵，让文化在当代生活中焕发新的生命力。
+              </p>
+              
+              <div className="space-y-4">
+                <div className="flex items-start">
+                  <div className="w-8 h-8 rounded-full bg-secondary/10 flex items-center justify-center mt-1 mr-4 flex-shrink-0">
+                    <i className="fa-solid fa-check text-secondary text-sm"></i>
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-gray-800">传统图案的现代演绎</h4>
+                    <p className="text-gray-600">将中国传统图案和元素以现代设计语言重新诠释，赋予其新的时代内涵。</p>
+                  </div>
+                </div>
+                
+                <div className="flex items-start">
+                  <div className="w-8 h-8 rounded-full bg-secondary/10 flex items-center justify-center mt-1 mr-4 flex-shrink-0">
+                    <i className="fa-solid fa-check text-secondary text-sm"></i>
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-gray-800">文化空间的氛围营造</h4>
+                    <p className="text-gray-600">为文化场馆、博物馆、中式餐厅等场所提供具有文化特色的地面解决方案。</p>
+                  </div>
+                </div>
+                
+                <div className="flex items-start">
+                  <div className="w-8 h-8 rounded-full bg-secondary/10 flex items-center justify-center mt-1 mr-4 flex-shrink-0">
+                    <i className="fa-solid fa-check text-secondary text-sm"></i>
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-gray-800">非物质文化遗产的传承</h4>
+                    <p className="text-gray-600">通过设计将非物质文化遗产元素融入地面产品，促进文化的传承与发展。</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Environmental Protection */}
+      <section className="py-20 bg-secondary/5">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16 animate-fade-in">
+            <h2 className="text-3xl font-bold text-primary mb-4">环保材料，安全环保，健康无忧</h2>
+            <div className="w-20 h-1 bg-accent mx-auto mb-6"></div>
+            <p className="text-gray-600 max-w-3xl mx-auto">
+              我们的产品严格符合国家环保标准，生产过程中严格控制有害物质排放，确保使用安全。
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
+            {/* Feature 1 */}
+            <div className="bg-white rounded-xl shadow-md p-8 text-center transition-all hover:shadow-xl">
+              <div className="w-16 h-16 bg-secondary/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                <i className="fa-solid fa-leaf text-2xl text-secondary"></i>
+              </div>
+              <h3 className="text-xl font-bold text-primary mb-3">环保材料</h3>
+              <p className="text-gray-600">
+                采用环保橡胶材料，不含重金属和有害挥发物，符合国家环保标准。
+              </p>
+            </div>
+
+            {/* Feature 2 */}
+            <div className="bg-white rounded-xl shadow-md p-8 text-center transition-all hover:shadow-xl">
+              <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                <i className="fa-solid fa-recycle text-2xl text-primary"></i>
+              </div>
+              <h3 className="text-xl font-bold text-primary mb-3">循环利用</h3>
+              <p className="text-gray-600">
+                产品可回收再利用，减少资源浪费，降低对环境的影响。
+              </p>
+            </div>
+
+            {/* Feature 3 */}
+            <div className="bg-white rounded-xl shadow-md p-8 text-center transition-all hover:shadow-xl">
+              <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                <i className="fa-solid fa-certificate text-2xl text-accent"></i>
+              </div>
+              <h3 className="text-xl font-bold text-primary mb-3">质量认证</h3>
+              <p className="text-gray-600">
+                产品通过多项质量认证，确保使用安全和性能稳定。
+              </p>
+            </div>
+
+            {/* Feature 4 */}
+            <div className="bg-white rounded-xl shadow-md p-8 text-center transition-all hover:shadow-xl">
+              <div className="w-16 h-16 bg-secondary/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                <i className="fa-solid fa-heart text-2xl text-secondary"></i>
+              </div>
+              <h3 className="text-xl font-bold text-primary mb-3">健康安全</h3>
+              <p className="text-gray-600">
+                无有害气体释放，创造健康安全的使用环境，特别适合对环境要求高的场所。
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Sustainability Goals */}
+      <section className="py-20 bg-primary text-white">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16 animate-fade-in">
+            <h2 className="text-3xl font-bold mb-4">我们的可持续发展目标</h2>
+            <div className="w-20 h-1 bg-accent mx-auto mb-6"></div>
+            <p className="text-white/80 max-w-3xl mx-auto">
+              我们制定了明确的可持续发展目标，不断推动企业和产品向更环保、更可持续的方向发展。
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+            {/* Goal 1 */}
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 transition-all hover:bg-white/20">
+              <h3 className="text-xl font-bold mb-6 flex items-center">
+                <span className="w-8 h-8 rounded-full bg-accent flex items-center justify-center mr-3 text-white">1</span>
+                减少碳排放
+              </h3>
+              <p className="text-white/80 mb-4">
+                到2030年，将生产过程中的碳排放量减少30%，通过采用更节能的生产工艺和使用可再生能源。
+              </p>
+              <div className="w-full bg-white/20 rounded-full h-2">
+                <div className="bg-accent h-2 rounded-full" style={{ width: '45%' }}></div>
+              </div>
+              <div className="flex justify-between mt-1">
+                <span className="text-xs text-white/70">当前进度</span>
+                <span className="text-xs text-white/70">45%</span>
+              </div>
+            </div>
+
+            {/* Goal 2 */}
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 transition-all hover:bg-white/20">
+              <h3 className="text-xl font-bold mb-6 flex items-center">
+                <span className="w-8 h-8 rounded-full bg-accent flex items-center justify-center mr-3 text-white">2</span>
+                增加可回收材料使用
+              </h3>
+              <p className="text-white/80 mb-4">
+                到2030年，将产品中可回收材料的比例提高到70%以上，推动循环经济发展。
+              </p>
+              <div className="w-full bg-white/20 rounded-full h-2">
+                <div className="bg-accent h-2 rounded-full" style={{ width: '30%' }}></div>
+              </div>
+              <div className="flex justify-between mt-1">
+                <span className="text-xs text-white/70">当前进度</span>
+                <span className="text-xs text-white/70">30%</span>
+              </div>
+            </div>
+
+            {/* Goal 3 */}
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 transition-all hover:bg-white/20">
+              <h3 className="text-xl font-bold mb-6 flex items-center">
+                <span className="w-8 h-8 rounded-full bg-accent flex items-center justify-center mr-3 text-white">3</span>
+                推广可持续解决方案
+              </h3>
+              <p className="text-white/80 mb-4">
+                到2030年，将可持续地面解决方案的市场份额提高到50%以上，推动行业可持续发展。
+              </p>
+              <div className="w-full bg-white/20 rounded-full h-2">
+                <div className="bg-accent h-2 rounded-full" style={{ width: '25%' }}></div>
+              </div>
+              <div className="flex justify-between mt-1">
+                <span className="text-xs text-white/70">当前进度</span>
+                <span className="text-xs text-white/70">25%</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Call to Action */}
+      <section className="py-16 bg-gray-100">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="text-2xl font-bold text-primary mb-6 animate-fade-in">
+            选择可持续的地面解决方案
+          </h2>
+          <p className="text-gray-600 mb-10 max-w-2xl mx-auto animate-fade-in" style="animation-delay: 0.2s">
+            与我们一起，为地球的可持续未来贡献力量。选择环保、耐用的橡胶地板产品，
+            为您的空间创造更美好的环境。
+          </p>
+          <div className="animate-fade-in" style="animation-delay: 0.4s">
+            <a href="#" class="inline-block bg-accent hover:bg-accent/90 text-white font-semibold py-3 px-8 rounded-lg transition-all transform hover:scale-105 shadow-lg" data-page="contact">
+              咨询可持续解决方案
+            </a>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    {/* 联系我们 */}
+    <div id="contact" class="page">
+      {/* Hero Section */}
+      <section class="relative h-[50vh] flex items-center justify-center overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-primary-color/90 to-primary-color/70 z-10"></div>
+        <img 
+          src="https://space.coze.cn/api/coze_space/gen_image?image_size=landscape_16_9&prompt=Modern%20office%20reception%20area&sign=93fe9b02d66cd00df07488f3b2276697" 
+          alt="现代办公接待区" 
+          className="absolute inset-0 w-full h-full object-cover"
+        />
+        <div className="container mx-auto px-4 z-20 text-center">
+          <h1 className="text-[clamp(2rem,5vw,3rem)] font-bold text-white mb-4 animate-fade-in">
+            联系我们
+          </h1>
+          <p className="text-[clamp(1rem,2vw,1.25rem)] text-white/90 max-w-2xl mx-auto animate-fade-in" style="animation-delay: 0.2s">
+            欢迎咨询与交流
+          </p>
+        </div>
+      </section>
+
+      {/* Embedded Form Section */}
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="max-w-5xl mx-auto animate-fade-in">
+            <div className="bg-white rounded-xl shadow-lg overflow-hidden transition-all hover:shadow-xl">
+              {/* 嵌入的表单 */}
+              <div className="relative" style={{ paddingBottom: '160%' }}>
+                <iframe 
+                  src="https://www.jsform.com/web/formview/686dc78275a03c4e37928c0f" 
+                  width="100%" 
+                  height="100%" 
+                  style={{ position: 'absolute', top: 0, left: 0 }}
+                  frameBorder="0" 
+                  title="联系我们表单"
+                  className="rounded-xl"
+                ></iframe>
+              </div>
+            </div>
+            
+            {/* 简单的表单说明 */}
+            <div className="mt-8 text-center text-gray-600">
+              <p>如有任何问题或需要进一步的帮助，请随时通过上述表单与我们联系。</p>
+              <p className="mt-2">我们的工作时间为：周一至周五 9:00 - 18:00</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      {/* 保持原有的CTA区域以确保页面完整性 */}
+      <section className="py-16 bg-primary text-white">
+        <div className="container mx-auto px-4 text-center">
+          <motion.h2 
+            className="text-2xl font-bold mb-6"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={{
+              hidden: { opacity: 0, y: 20 },
+              visible: { opacity: 1, y: 0, transition: { duration: 0.6 } }
+            }}
+          >
+            还有其他问题？
+          </motion.h2>
+          <motion.p 
+            className="text-white/80 mb-10 max-w-2xl mx-auto"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={{
+              hidden: { opacity: 0, y: 20 },
+              visible: { opacity: 1, y: 0, transition: { duration: 0.6, delay: 0.2 } }
+            }}
+          >
+            除了通过表单联系我们，您还可以通过以下方式与我们取得联系
+          </motion.p>
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={{
+              hidden: { opacity: 0, y: 20 },
+              visible: { opacity: 1, y: 0, transition: { duration: 0.6, delay: 0.4 } }
+            }}
+            className="flex flex-col sm:flex-row justify-center gap-4"
+          >
+            <a href="tel:4001234567" className="bg-white hover:bg-white/90 text-primary font-semibold py-3 px-8 rounded-lg transition-all transform hover:scale-105 shadow-lg">
+              立即致电 <i className="fa-solid fa-phone ml-2"></i>
+            </a>
+            <a href="mailto:info@zhongkenuola.com" className="bg-accent hover:bg-accent/90 text-white font-semibold py-3 px-8 rounded-lg transition-all transform hover:scale-105 shadow-lg">
+              发送邮件 <i className="fa-solid fa-envelope ml-2"></i>
+            </a>
+          </motion.div>
+        </div>
+      </section>
+    </div>
+
+    {/* 管理员消息页面 */}
+    <div id="admin-messages" class="page">
+      {/* Hero Section */}
+      <section className="relative h-[30vh] flex items-center justify-center overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-primary-color/90 to-primary-color/70 z-10"></div>
+        <img 
+          src="https://space.coze.cn/api/coze_space/gen_image?image_size=landscape_16_9&prompt=Admin%20dashboard%20interface&sign=a326525d4be34ac7ca39decd58d14722" 
+          alt="管理员界面" 
+          className="absolute inset-0 w-full h-full object-cover"
+        />
+        <div className="container mx-auto px-4 z-20 text-center">
+          <h1 className="text-[clamp(2rem,5vw,3rem)] font-bold text-white mb-4 animate-fade-in">
+            消息管理中心
+          </h1>
+          <p className="text-[clamp(1rem,2vw,1.25rem)] text-white/90 max-w-2xl mx-auto animate-fade-in" style="animation-delay: 0.2s">
+            查看和管理网站访客提交的消息
+          </p>
+        </div>
+      </section>
+
+      {/* Messages List Section */}
+      <section className="py-12 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <div className="max-w-5xl mx-auto animate-fade-in">
+            <div className="flex justify-between items-center mb-8">
+              <h2 className="text-2xl font-bold text-primary">访客消息</h2>
+              <span className="bg-primary text-white px-4 py-2 rounded-lg font-medium">
+                共 0 条消息
+              </span>
+            </div>
+
+            <div className="bg-white rounded-xl shadow-sm p-10 text-center">
+              <i className="fa-solid fa-inbox text-4xl text-gray-300 mb-4"></i>
+              <h3 className="text-xl font-semibold text-gray-800 mb-2">暂无消息</h3>
+              <p className="text-gray-500">暂无访客提交的消息</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  {/* 页脚 */}
+  <footer className="bg-primary text-white pt-16 pb-8">
+    <div className="container mx-auto px-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-16">
+        {/* Company Info */}
+        <div>
+          <div className="flex items-center mb-6">
+            <div className="w-10 h-10 bg-white rounded-lg flex items-center justify-center mr-3">
+              <span className="text-primary font-bold text-xl">N</span>
+            </div>
+            <span className="text-xl font-bold">橡胶地板</span>
+          </div>
+          <p className="text-white/80 mb-6">
+            我们是一家专注于高性能橡胶地板研发与品牌运营的企业，以"科技、创新、文化"为核心理念，
+            为客户提供更专业、更精准的地面解决方案。
+          </p>
+        </div>
+
+        {/* Quick Links */}
+        <div>
+          <h3 className="text-lg font-bold mb-6 border-b border-white/20 pb-3">快速链接</h3>
+          <ul className="space-y-3">
+            <li><a href="#" className="text-white/80 hover:text-white transition-colors nav-link" data-page="brand">品牌简介</a></li>
+            <li><a href="#" className="text-white/80 hover:text-white transition-colors nav-link" data-page="product">产品简介</a></li>
+            <li><a href="#" className="text-white/80 hover:text-white transition-colors nav-link" data-page="market">细分市场</a></li>
+          </ul>
+        </div>
+
+        {/* Products */}
+        <div>
+          <h3 className="text-lg font-bold mb-6 border-b border-white/20 pb-3">产品系列</h3>
+          <ul className="space-y-3">
+            <li><a href="#" className="text-white/80 hover:text-white transition-colors nav-link" data-page="product">中科诺拉 | 高性能橡胶地板系列</a></li>
+            <li><a href="#" className="text-white/80 hover:text-white transition-colors nav-link" data-page="product">中研诺拉 | 研发型创新地板</a></li>
+            <li><a href="#" className="text-white/80 hover:text-white transition-colors nav-link" data-page="product">中汉诺拉 | 文化型艺术地板</a></li>
+          </ul>
+        </div>
+
+         {/* 企业愿景 */}
+         <div>
+           <h3 className="text-lg font-bold mb-6 border-b border-white/20 pb-3">企业愿景</h3>
+           <p className="text-white/80">
+             我们致力于成为全球领先的高性能地面材料解决方案提供商，以科技、创新、文化为核心，为客户创造更优质的空间体验。
+           </p>
+         </div>
+      </div>
+
+      {/* Bottom Footer */}
+      <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center">
+        <p className="text-white/60 text-sm mb-4 md:mb-0">
+            &copy; {new Date().getFullYear()} 橡胶地板. 保留所有权利.
+        </p>
+        <div className="flex space-x-6">
+          <a href="#" className="text-white/60 hover:text-white text-sm transition-colors">隐私政策</a>
+          <a href="#" className="text-white/60 hover:text-white text-sm transition-colors">使用条款</a>
+          <a href="#" className="text-white/60 hover:text-white text-sm transition-colors">网站地图</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript 功能 -->
+  <script>
+    // 处理导航栏滚动效果
+    const navbar = document.getElementById('navbar');
+    const logoText = document.getElementById('logo-text');
+    const menuIcon = document.getElementById('menu-icon');
+    const navLinks = document.querySelectorAll('.nav-link');
+    const mobileLinks = document.querySelectorAll('.mobile-link');
+    
+    window.addEventListener('scroll', () => {
+       if (window.scrollY > 10) {
+         navbar.classList.remove('bg-primary/90', 'py-5');
+        navbar.classList.add('bg-white', 'shadow-md', 'py-3');
+        logoText.classList.remove('text-white');
+        logoText.classList.add('text-primary');
+        menuIcon.classList.remove('text-white');
+        menuIcon.classList.add('text-primary');
+        
+        navLinks.forEach(link => {
+           link.classList.remove('text-white', 'hover:text-white/90');
+           link.classList.add('text-gray-800', 'hover:text-accent');
+        });
+      } else {
+        navbar.classList.remove('bg-white', 'shadow-md', 'py-3');
+         navbar.classList.add('bg-primary/90', 'py-5');
+        logoText.classList.remove('text-primary');
+        logoText.classList.add('text-white');
+        menuIcon.classList.remove('text-primary');
+        menuIcon.classList.add('text-white');
+        
+        navLinks.forEach(link => {
+           link.classList.remove('text-gray-800', 'hover:text-accent');
+           link.classList.add('text-white', 'hover:text-white/90');
+        });
+      }
+    });
+    
+    // 移动端菜单
+    const mobileMenuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+    
+    mobileMenuButton.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+      // 切换图标
+         if (mobileMenu.classList.contains('hidden')) {
+            menuIcon.className = 'text-2xl text-primary fa-solid fa-chevron-down';
+            if (window.scrollY <= 10) {
+              menuIcon.classList.add('text-white');
+              menuIcon.classList.remove('text-primary');
+            }
+         } else {
+            menuIcon.className = 'text-2xl text-primary fa-solid fa-chevron-up';
+            if (window.scrollY <= 10) {
+              menuIcon.classList.add('text-white');
+              menuIcon.classList.remove('text-primary');
+            }
+      }
+    });
+    
+    // 平滑滚动
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        
+        const targetId = this.getAttribute('href');
+        if (targetId === '#') return;
+        
+        const targetElement = document.querySelector(targetId);
+        if (targetElement) {
+          window.scrollTo({
+            top: targetElement.offsetTop - 80,
+            behavior: 'smooth'
+          });
+        }
+      });
+    });
+    
+    // 页面导航
+    const allLinks = document.querySelectorAll('[data-page]');
+    const pages = document.querySelectorAll('.page');
+    
+    // 默认激活首页
+    pages.forEach(page => {
+      page.classList.remove('active');
+    });
+    document.getElementById('home').classList.add('active');
+    
+    allLinks.forEach(link => {
+      link.addEventListener('click', function(e) {
+        if (this.getAttribute('href') === '#') {
+          e.preventDefault();
+        }
+        
+        const pageId = this.getAttribute('data-page');
+        if (pageId) {
+          // 隐藏所有页面
+          pages.forEach(page => {
+            page.classList.remove('active');
+          });
+          
+          // 显示目标页面
+          const targetPage = document.getElementById(pageId);
+          if (targetPage) {
+            targetPage.classList.add('active');
+            
+            // 关闭移动端菜单（如果打开）
+            if (!mobileMenu.classList.contains('hidden')) {
+              mobileMenu.classList.add('hidden');
+              menuIcon.innerHTML = 'fa-caret-down';
+              menuIcon.className = 'text-2xl text-primary';
+              if (window.scrollY <= 10) {
+                menuIcon.classList.add('text-white');
+                menuIcon.classList.remove('text-primary');
+              }
+            }
+            
+            // 滚动到页面顶部
+            window.scrollTo({
+              top: 0,
+              behavior: 'smooth'
+            });
+          }
+        }
+      });
+    });
+    
+    // 模拟消息存储功能
+    function saveContactMessage(name, email, phone, subject, message) {
+      try {
+        // 获取现有消息
+        let messages = JSON.parse(localStorage.getItem('contactMessages') || '[]');
+        
+        // 添加新消息
+        messages.push({
+          id: Date.now().toString(),
+          name,
+          email,
+          phone,
+          subject,
+          message,
+          timestamp: new Date().toISOString()
+        });
+        
+        // 保存到本地存储
+        localStorage.setItem('contactMessages', JSON.stringify(messages));
+        return true;
+      } catch (error) {
+        console.error('保存消息失败:', error);
+        return false;
+      }
+    }
+    
+    // 添加动画
+    document.addEventListener('DOMContentLoaded', () => {
+      // 添加淡入动画
+      const fadeElements = document.querySelectorAll('.animate-fade-in');
+      fadeElements.forEach((element, index) => {
+        setTimeout(() => {
+          element.style.opacity = '1';
+          element.style.transform = 'translateY(0)';
+        }, 100 * index);
+      });
+      
+      // 确保所有Tailwind类名应用成功
+      ensureTailwindStyles();
+    });
+    
+    // 确保Tailwind样式在本地环境中应用成功的辅助函数
+    function ensureTailwindStyles() {
+      // 为关键元素添加重要的类以确保样式正确应用
+      document.querySelectorAll('.bg-primary').forEach(el => el.style.backgroundColor = 'var(--primary-color)');
+      document.querySelectorAll('.bg-secondary').forEach(el => el.style.backgroundColor = 'var(--secondary-color)');
+      document.querySelectorAll('.bg-accent').forEach(el => el.style.backgroundColor = 'var(--accent-color)');
+      document.querySelectorAll('.text-primary').forEach(el => el.style.color = 'var(--primary-color)');
+      document.querySelectorAll('.text-secondary').forEach(el => el.style.color = 'var(--secondary-color)');
+      document.querySelectorAll('.text-accent').forEach(el => el.style.color = 'var(--accent-color)');
+      
+      // 检查并修复轮播图显示问题
+      setTimeout(() => {
+        const banners = document.querySelectorAll('[id^="banner-"]');
+        if (banners.length > 0) {
+          // 确保第一张轮播图显示
+          document.getElementById('banner-1').style.opacity = '1';
+          document.getElementById('banner-2').style.opacity = '0';
+          document.getElementById('banner-3').style.opacity = '0';
+        }
+      }, 500);
+    }
+    
+    // 轮播图功能
+    let currentBannerIndex = 0;
+    const banners = [
+      {
+        id: 1,
+        title: "科技、创新、文化<br /><span class='text-accent'>打造每一寸恰到好处的地面</span>",
+        description: "我们专注于高性能橡胶地板研发与品牌运营，以三大系列品牌满足不同场景对地面材料的差异化需求。"
+      },
+      {
+        id: 2,
+        title: "为商业空间提供<br />专业地面解决方案",
+        description: "中科诺拉系列为各类商业空间提供耐用、美观的地面材料，兼具功能性与设计感。"
+      },
+      {
+        id: 3,
+        title: "可持续发展<br />从地面开始",
+        description: "我们致力于环保材料研发，为现代建筑提供可持续、健康的地面解决方案。"
+      }
+    ];
+    
+    // 自动切换轮播图
+    let bannerInterval = setInterval(nextBanner, 5000);
+    
+    function nextBanner() {
+      goToBanner((currentBannerIndex + 1) % banners.length);
+    }
+    
+    function goToBanner(index) {
+      // 隐藏所有图片
+      for (let i = 1; i <= banners.length; i++) {
+        document.getElementById(`banner-${i}`).style.opacity = '0';
+      }
+      
+      // 显示当前图片
+      document.getElementById(`banner-${index + 1}`).style.opacity = '1';
+      
+      // 更新内容
+      document.getElementById('banner-title').innerHTML = banners[index].title;
+      document.getElementById('banner-description').textContent = banners[index].description;
+      
+      // 更新指示器
+      const indicators = document.querySelectorAll('#banner-indicators button');
+      indicators.forEach((indicator, i) => {
+        if (i === index) {
+          indicator.classList.add('w-10');
+          indicator.classList.remove('w-3', 'bg-white/50');
+          indicator.classList.add('bg-white');
+        } else {
+          indicator.classList.remove('w-10', 'bg-white');
+          indicator.classList.add('w-3', 'bg-white/50');
+        }
+      });
+      
+      currentBannerIndex = index;
+      
+      // 重置定时器
+      clearInterval(bannerInterval);
+      bannerInterval = setInterval(nextBanner, 5000);
+    }
+  </script>
+</body>
+</html>
