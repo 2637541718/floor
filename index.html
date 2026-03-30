@@ -26,155 +26,186 @@
     }
   </script>
   <style>
-    /* 内联所有关键样式，确保在所有环境中正常显示 */
-    /* 加强基础样式定义，确保跨平台一致性 */
-    :root {
-      --primary-color: #1E3A8A; /* 深蓝色主色调 */
-      --secondary-color: #22C55E; /* 绿色辅助色 */
-      --accent-color: #F97316; /* 橙色强调色 */
-      --dark-color: #1F2937;
-      --light-color: #F9FAFB;
-    }
-    
-    html {
-      scroll-behavior: smooth;
-    }
-    
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji';
-      line-height: 1.5;
-      font-weight: 400;
-      color: #1F2937;
-      background-color: #F9FAFB;
-    }
-    
-     /* 确保Tailwind类名在所有环境中都能生效 */
-     .bg-primary { background-color: var(--primary-color) !important; }
-     .bg-secondary { background-color: var(--secondary-color) !important; }
-     .bg-accent { background-color: var(--accent-color) !important; }
-     .text-primary { color: var(--primary-color) !important; }
-     .text-secondary { color: var(--secondary-color) !important; }
-     .text-accent { color: var(--accent-color) !important; }
+  /* 内联所有关键样式，确保在所有环境中正常显示 */
+  /* 加强基础样式定义，确保跨平台一致性 */
+  :root {
+    --primary-color: #1E3A8A; /* 深蓝色主色调 */
+    --secondary-color: #22C55E; /* 绿色辅助色 */
+    --accent-color: #F97316; /* 橙色强调色 */
+    --dark-color: #1F2937;
+    --light-color: #F9FAFB;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji';
+    line-height: 1.5;
+    font-weight: 400;
+    color: #1F2937;
+    background-color: #F9FAFB;
+    margin: 0;
+    padding: 0;
+  }
+  
+   /* 确保Tailwind类名在所有环境中都能生效 */
+   .bg-primary { background-color: var(--primary-color) !important; }
+   .bg-secondary { background-color: var(--secondary-color) !important; }
+   .bg-accent { background-color: var(--accent-color) !important; }
+   .text-primary { color: var(--primary-color) !important; }
+   .text-secondary { color: var(--secondary-color) !important; }
+   .text-accent { color: var(--accent-color) !important; }
+   
+   /* 强化布局样式 */
+   .container {
+     width: 100%;
+     max-width: 1280px;
+     margin-left: auto !important;
+     margin-right: auto !important;
+     padding-left: 16px !important;
+     padding-right: 16px !important;
+   }
+   
+   .grid {
+     display: grid !important;
+   }
+   
+   .grid-cols-1 {
+     grid-template-columns: repeat(1, minmax(0, 1fr)) !important;
+   }
+   
+   .md\:grid-cols-2 {
+     grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+   }
+   
+   .lg\:grid-cols-4 {
+     grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+   }
+   
+   .lg\:grid-cols-3 {
+     grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+   }
+   
+   .lg\:grid-cols-2 {
+     grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+   }
+   
+   .gap-8 {
+     gap: 2rem !important;
+   }
+   
+   .gap-10 {
+     gap: 2.5rem !important;
+   }
+   
+   .gap-16 {
+     gap: 4rem !important;
+   }
      
-     /* 强化布局样式 */
-     .container {
-       width: 100%;
-       max-width: 1280px;
-       margin-left: auto;
-       margin-right: auto;
-       padding-left: 16px;
-       padding-right: 16px;
-     }
-     
-     .grid {
-       display: grid;
-     }
-     
-     .grid-cols-1 {
-       grid-template-columns: repeat(1, minmax(0, 1fr));
-     }
-     
-     .md\:grid-cols-2 {
-       grid-template-columns: repeat(2, minmax(0, 1fr));
-     }
-     
-     .lg\:grid-cols-4 {
-       grid-template-columns: repeat(4, minmax(0, 1fr));
-     }
-     
-     .lg\:grid-cols-3 {
-       grid-template-columns: repeat(3, minmax(0, 1fr));
-     }
-     
-     .lg\:grid-cols-2 {
-       grid-template-columns: repeat(2, minmax(0, 1fr));
-     }
-     
-     .gap-8 {
-       gap: 2rem;
-     }
-     
-     .gap-10 {
-       gap: 2.5rem;
-     }
-     
-     .gap-16 {
-       gap: 4rem;
-     }
-     
-     .max-w-3xl {
-       max-width: 48rem;
-     }
-     
-     .max-w-4xl {
-       max-width: 56rem;
-     }
-     
-     .max-w-5xl {
-       max-width: 64rem;
-     }
-     
-     .max-w-6xl {
-       max-width: 72rem;
-     }
-     
-     .text-center {
-       text-align: center;
-     }
-    .border-primary { border-color: var(--primary-color) !important; }
-    
-    /* 导航栏滚动效果 */
-    .nav-scrolled {
-      background-color: white !important;
-      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06) !important;
-    }
-    
-    /* 动画效果 */
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-    
-    .animate-fade-in {
-      animation: fadeIn 0.8s ease forwards;
-      opacity: 0;
-      transform: translateY(20px);
-    }
-    
-    /* 轮播图指示器动画 */
-    @keyframes bounce {
-      0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
-      40% { transform: translateY(-10px); }
-      60% { transform: translateY(-5px); }
-    }
-    
-    /* 确保所有Tailwind的基础样式都能应用 */
-    .flex { display: flex; }
-    .items-center { align-items: center; }
-    .justify-center { justify-content: center; }
-    .text-white { color: white !important; }
-    .text-gray-600 { color: #4B5563 !important; }
-    .font-bold { font-weight: 700 !important; }
-    .mb-4 { margin-bottom: 1rem !important; }
-     .mb-6 { margin-bottom: 1.5rem !important; }
-     .rounded-lg { border-radius: 0.5rem !important; }
-     .rounded-xl { border-radius: 0.75rem !important; }
-     .shadow-md { box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06) !important; }
-     .shadow-lg { box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05) !important; }
-     .p-4 { padding: 1rem !important; }
-     .p-6 { padding: 1.5rem !important; }
-     .py-3 { padding-top: 0.75rem !important; padding-bottom: 0.75rem !important; }
-     .py-5 { padding-top: 1.25rem !important; padding-bottom: 1.25rem !important; }
-     .py-8 { padding-top: 2rem !important; padding-bottom: 2rem !important; }
-     .py-10 { padding-top: 2.5rem !important; padding-bottom: 2.5rem !important; }
-     .py-12 { padding-top: 3rem !important; padding-bottom: 3rem !important; }
-     .py-16 { padding-top: 4rem !important; padding-bottom: 4rem !important; }
-     .py-20 { padding-top: 5rem !important; padding-bottom: 5rem !important; }
-    .px-6 { padding-left: 1.5rem !important; padding-right: 1.5rem !important; }
-    .px-8 { padding-left: 2rem !important; padding-right: 2rem !important; }
-    .w-full { width: 100% !important; }
-    .h-full { height: 100% !important; }
-    .object-cover { object-fit: cover !important; }
+   .max-w-3xl {
+     max-width: 48rem !important;
+   }
+   
+   .max-w-4xl {
+     max-width: 56rem !important;
+   }
+   
+   .max-w-5xl {
+     max-width: 64rem !important;
+   }
+   
+   .max-w-6xl {
+     max-width: 72rem !important;
+   }
+   
+   .text-center {
+     text-align: center !important;
+   }
+  .border-primary { border-color: var(--primary-color) !important; }
+  
+  /* 导航栏滚动效果 */
+  .nav-scrolled {
+    background-color: white !important;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06) !important;
+  }
+  
+  /* 动画效果 */
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  .animate-fade-in {
+    animation: fadeIn 0.8s ease forwards !important;
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  
+  /* 轮播图指示器动画 */
+  @keyframes bounce {
+    0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+    40% { transform: translateY(-10px); }
+    60% { transform: translateY(-5px); }
+  }
+  
+  /* 确保所有Tailwind的基础样式都能应用 */
+  .flex { display: flex !important; }
+  .items-center { align-items: center !important; }
+  .justify-center { justify-content: center !important; }
+  .text-white { color: white !important; }
+  .text-gray-600 { color: #4B5563 !important; }
+  .font-bold { font-weight: 700 !important; }
+  .mb-4 { margin-bottom: 1rem !important; }
+   .mb-6 { margin-bottom: 1.5rem !important; }
+   .rounded-lg { border-radius: 0.5rem !important; }
+   .rounded-xl { border-radius: 0.75rem !important; }
+   .shadow-md { box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06) !important; }
+   .shadow-lg { box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05) !important; }
+   .p-4 { padding: 1rem !important; }
+   .p-6 { padding: 1.5rem !important; }
+   .py-3 { padding-top: 0.75rem !important; padding-bottom: 0.75rem !important; }
+   .py-5 { padding-top: 1.25rem !important; padding-bottom: 1.25rem !important; }
+   .py-8 { padding-top: 2rem !important; padding-bottom: 2rem !important; }
+   .py-10 { padding-top: 2.5rem !important; padding-bottom: 2.5rem !important; }
+   .py-12 { padding-top: 3rem !important; padding-bottom: 3rem !important; }
+   .py-16 { padding-top: 4rem !important; padding-bottom: 4rem !important; }
+   .py-20 { padding-top: 5rem !important; padding-bottom: 5rem !important; }
+  .px-6 { padding-left: 1.5rem !important; padding-right: 1.5rem !important; }
+  .px-8 { padding-left: 2rem !important; padding-right: 2rem !important; }
+  .w-full { width: 100% !important; }
+  .h-full { height: 100% !important; }
+  .object-cover { object-fit: cover !important; }
+  
+  /* 额外的布局保障 */
+  .min-h-screen {
+    min-height: 100vh !important;
+  }
+  
+  .flex-col {
+    flex-direction: column !important;
+  }
+  
+  .flex-grow {
+    flex-grow: 1 !important;
+  }
+  
+  /* 修复footer布局问题 */
+  footer {
+    width: 100% !important;
+    position: relative !important;
+    z-index: 1 !important;
+  }
+  
+  /* 修复首页和可持续发展页面的特定样式问题 */
+  #home .container,
+  #sustainability .container {
+    width: 100% !important;
+    max-width: 1280px !important;
+    margin: 0 auto !important;
+    padding: 0 16px !important;
+  }
     
     /* 页面过渡样式 */
     .page {
@@ -214,7 +245,7 @@
     }
   </style>
 </head>
-  <body class="min-h-screen bg-gray-50 w-full">
+  <body class="min-h-screen bg-gray-50 w-full m-0 p-0">
   <!-- 导航栏 -->
   <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 bg-primary/90 py-5">
     <div class="container mx-auto px-4">
@@ -264,7 +295,7 @@
   </nav>
 
   <!-- 主要内容区域 -->
-  <main class="pt-20">
+  <main class="pt-20 flex-grow">
     <!-- 首页 -->
     <div id="home" class="page active">
        <!-- Hero Section - 自动切换轮播图 -->
@@ -2006,8 +2037,8 @@
     <i class="fa-solid fa-arrow-up"></i>
   </button>
 
-  <footer className="bg-primary text-white pt-16 pb-8 w-full">
-    <div className="container mx-auto px-4">
+  <footer className="bg-primary text-white pt-16 pb-8 w-full relative z-10">
+    <div className="container mx-auto px-4 w-full">
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-16">
         {/* Company Info */}
         <div>
@@ -2236,29 +2267,81 @@
     });
     
     // 确保Tailwind样式在本地环境中应用成功的辅助函数
-    function ensureTailwindStyles() {
-      // 为关键元素添加重要的类以确保样式正确应用
-      document.querySelectorAll('.bg-primary').forEach(el => el.style.backgroundColor = 'var(--primary-color)');
-      document.querySelectorAll('.bg-secondary').forEach(el => el.style.backgroundColor = 'var(--secondary-color)');
-      document.querySelectorAll('.bg-accent').forEach(el => el.style.backgroundColor = 'var(--accent-color)');
-      document.querySelectorAll('.text-primary').forEach(el => el.style.color = 'var(--primary-color)');
-      document.querySelectorAll('.text-secondary').forEach(el => el.style.color = 'var(--secondary-color)');
-      document.querySelectorAll('.text-accent').forEach(el => el.style.color = 'var(--accent-color)');
-      
-     // 检查并修复轮播图显示问题
-     setTimeout(() => {
-       const banners = document.querySelectorAll('[id^="banner-"]');
-       if (banners.length > 0) {
-         // 确保第一张轮播图显示
-         document.getElementById('banner-1').style.opacity = '1';
-         document.getElementById('banner-2').style.opacity = '0';
-         document.getElementById('banner-3').style.opacity = '0';
-         
-         // 确保banner文字居中
-         document.getElementById('banner-title').style.textAlign = 'center';
-       }
-     }, 500);
+  function ensureTailwindStyles() {
+    // 为关键元素添加重要的类以确保样式正确应用
+    document.querySelectorAll('.bg-primary').forEach(el => el.style.backgroundColor = 'var(--primary-color)');
+    document.querySelectorAll('.bg-secondary').forEach(el => el.style.backgroundColor = 'var(--secondary-color)');
+    document.querySelectorAll('.bg-accent').forEach(el => el.style.backgroundColor = 'var(--accent-color)');
+    document.querySelectorAll('.text-primary').forEach(el => el.style.color = 'var(--primary-color)');
+    document.querySelectorAll('.text-secondary').forEach(el => el.style.color = 'var(--secondary-color)');
+    document.querySelectorAll('.text-accent').forEach(el => el.style.color = 'var(--accent-color)');
+    
+    // 修复首页和可持续发展页面的布局问题
+    const homePage = document.getElementById('home');
+    const sustainabilityPage = document.getElementById('sustainability');
+    
+    if (homePage) {
+      // 确保首页容器正确应用样式
+      const homeContainers = homePage.querySelectorAll('.container');
+      homeContainers.forEach(container => {
+        container.style.width = '100%';
+        container.style.maxWidth = '1280px';
+        container.style.margin = '0 auto';
+        container.style.padding = '0 16px';
+      });
     }
+    
+    if (sustainabilityPage) {
+      // 确保可持续发展页面容器正确应用样式
+      const sustainabilityContainers = sustainabilityPage.querySelectorAll('.container');
+      sustainabilityContainers.forEach(container => {
+        container.style.width = '100%';
+        container.style.maxWidth = '1280px';
+        container.style.margin = '0 auto';
+        container.style.padding = '0 16px';
+      });
+    }
+    
+    // 修复底部区域布局问题
+    const footer = document.querySelector('footer');
+    if (footer) {
+      footer.style.width = '100%';
+      footer.style.position = 'relative';
+      footer.style.zIndex = '1';
+      
+      const footerContainer = footer.querySelector('.container');
+      if (footerContainer) {
+        footerContainer.style.width = '100%';
+        footerContainer.style.maxWidth = '1280px';
+        footerContainer.style.margin = '0 auto';
+        footerContainer.style.padding = '0 16px';
+      }
+    }
+    
+    // 确保所有网格布局正确应用
+    document.querySelectorAll('.grid').forEach(grid => {
+      grid.style.display = 'grid';
+    });
+    
+    // 检查并修复轮播图显示问题
+    setTimeout(() => {
+      const banners = document.querySelectorAll('[id^="banner-"]');
+      if (banners.length > 0) {
+        // 确保第一张轮播图显示
+        document.getElementById('banner-1').style.opacity = '1';
+        document.getElementById('banner-2').style.opacity = '0';
+        document.getElementById('banner-3').style.opacity = '0';
+        
+        // 确保banner文字居中
+        const bannerTitle = document.getElementById('banner-title');
+        if (bannerTitle) {
+          bannerTitle.style.textAlign = 'center';
+          bannerTitle.style.maxWidth = '90%';
+          bannerTitle.style.margin = '0 auto';
+        }
+      }
+    }, 500);
+  }
     
     // 轮播图功能
     let currentBannerIndex = 0;
@@ -2321,19 +2404,23 @@
        bannerInterval = setInterval(nextBanner, 5000);
       }
       
-      // 返回顶部按钮功能
-      const backToTopButton = document.getElementById('back-to-top');
-      
-      // 监听滚动事件，显示或隐藏返回顶部按钮
-      window.addEventListener('scroll', () => {
-        if (window.pageYOffset > 300) {
-          backToTopButton.classList.remove('opacity-0', 'pointer-events-none');
-          backToTopButton.classList.add('opacity-100', 'pointer-events-auto');
-        } else {
-          backToTopButton.classList.remove('opacity-100', 'pointer-events-auto');
-          backToTopButton.classList.add('opacity-0', 'pointer-events-none');
-        }
-      });
+       // 返回顶部按钮功能
+       const backToTopButton = document.getElementById('back-to-top');
+       
+       // 监听滚动事件，显示或隐藏返回顶部按钮
+       window.addEventListener('scroll', () => {
+         if (window.pageYOffset > 300) {
+           backToTopButton.classList.remove('opacity-0', 'pointer-events-none');
+           backToTopButton.classList.add('opacity-100', 'pointer-events-auto');
+           backToTopButton.style.opacity = '1';
+           backToTopButton.style.pointerEvents = 'auto';
+         } else {
+           backToTopButton.classList.remove('opacity-100', 'pointer-events-auto');
+           backToTopButton.classList.add('opacity-0', 'pointer-events-none');
+           backToTopButton.style.opacity = '0';
+           backToTopButton.style.pointerEvents = 'none';
+         }
+       });
       
       // 平滑滚动到页面顶部
       backToTopButton.addEventListener('click', () => {
